@@ -7,14 +7,147 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C01BFA01C6E719400C0EDEC /* NuevoIngresoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C01BF9F1C6E719400C0EDEC /* NuevoIngresoViewController.swift */; };
+		5C01BFA21C6E71B700C0EDEC /* NuevoEgresoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C01BFA11C6E71B700C0EDEC /* NuevoEgresoViewController.swift */; };
+		5C01BFA41C6E83B900C0EDEC /* FSCalendar in Resources */ = {isa = PBXBuildFile; fileRef = 5C01BFA31C6E83B900C0EDEC /* FSCalendar */; };
+		5C0587F31C8C9D9B00BE885A /* ContrasenaFaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0587F21C8C9D9A00BE885A /* ContrasenaFaceViewController.swift */; };
+		5C1207451C89C9330050DBDA /* MetaInicialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1207441C89C9330050DBDA /* MetaInicialViewController.swift */; };
+		5C1FE4C51C7E9CF70032D24E /* MiMetaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1FE4C41C7E9CF70032D24E /* MiMetaViewController.swift */; };
+		5C1FE4C71C7E9E600032D24E /* ProgresoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1FE4C61C7E9E600032D24E /* ProgresoViewController.swift */; };
+		5C227C971C6955F40000B6CD /* UICountingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C227C961C6955F40000B6CD /* UICountingLabel.swift */; };
+		5C227C991C6956CB0000B6CD /* MiCarteraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C227C981C6956CB0000B6CD /* MiCarteraViewController.swift */; };
+		5C265F571C8632C700A5C0F8 /* ProgresoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C265F561C8632C700A5C0F8 /* ProgresoTableViewCell.swift */; };
+		5C35F1FA1C87E2C20030B988 /* AjustesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35F1F91C87E2C20030B988 /* AjustesTableViewController.swift */; };
+		5C5505661C7660A7000B6AB2 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5505621C7660A7000B6AB2 /* FBSDKCoreKit.framework */; };
+		5C5505671C7660A7000B6AB2 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5505631C7660A7000B6AB2 /* FBSDKLoginKit.framework */; };
+		5C55056C1C7666F0000B6AB2 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5C55056A1C7666F0000B6AB2 /* GoogleSignIn.bundle */; };
+		5C55056D1C7666F0000B6AB2 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C55056B1C7666F0000B6AB2 /* GoogleSignIn.framework */; };
+		5C5505711C7669D4000B6AB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C5505701C7669D4000B6AB2 /* GoogleService-Info.plist */; };
+		5C5505731C766AB9000B6AB2 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5505721C766AB9000B6AB2 /* AddressBook.framework */; };
+		5C5505751C766ABE000B6AB2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5505741C766ABE000B6AB2 /* StoreKit.framework */; };
+		5C5505771C766AC7000B6AB2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5505761C766AC7000B6AB2 /* SystemConfiguration.framework */; };
+		5C5505791C766BD7000B6AB2 /* libz.1.1.3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5505781C766BD7000B6AB2 /* libz.1.1.3.tbd */; };
+		5C72CC741C754329008B4F87 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C72CC731C754329008B4F87 /* LoginViewController.swift */; };
+		5C72CC771C754384008B4F87 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C72CC751C754384008B4F87 /* PageContentViewController.swift */; };
+		5C72CC781C754384008B4F87 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C72CC761C754384008B4F87 /* PageViewController.swift */; };
+		5CA2F34C1C728E02000D34DE /* JHProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2F34B1C728E01000D34DE /* JHProgressHUD.swift */; };
+		5CA2F34E1C728ECB000D34DE /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2F34D1C728ECB000D34DE /* SCLAlertView.swift */; };
+		5CA2F35E1C73CB82000D34DE /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2F34F1C73CB82000D34DE /* IQKeyboardManager.swift */; };
+		5CA2F35F1C73CB82000D34DE /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2F3501C73CB82000D34DE /* IQKeyboardReturnKeyHandler.swift */; };
+		5CA2F3601C73CB82000D34DE /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2F3511C73CB82000D34DE /* IQNSArray+Sort.swift */; };
+		5CA2F3611C73CB82000D34DE /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2F3521C73CB82000D34DE /* IQUITextFieldView+Additions.swift */; };
+		5CA2F3621C73CB82000D34DE /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2F3531C73CB82000D34DE /* IQUIView+Hierarchy.swift */; };
+		5CA2F3631C73CB82000D34DE /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2F3541C73CB82000D34DE /* IQUIViewController+Additions.swift */; };
+		5CA2F3641C73CB82000D34DE /* IQUIWindow+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2F3551C73CB82000D34DE /* IQUIWindow+Hierarchy.swift */; };
+		5CA2F3651C73CB82000D34DE /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2F3561C73CB82000D34DE /* IQKeyboardManagerConstants.swift */; };
+		5CA2F3661C73CB82000D34DE /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2F3571C73CB82000D34DE /* IQKeyboardManagerConstantsInternal.swift */; };
+		5CA2F3671C73CB82000D34DE /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2F3581C73CB82000D34DE /* IQTextView.swift */; };
+		5CA2F3681C73CB82000D34DE /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2F3591C73CB82000D34DE /* IQBarButtonItem.swift */; };
+		5CA2F3691C73CB82000D34DE /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2F35A1C73CB82000D34DE /* IQTitleBarButtonItem.swift */; };
+		5CA2F36A1C73CB82000D34DE /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2F35B1C73CB82000D34DE /* IQToolbar.swift */; };
+		5CA2F36B1C73CB82000D34DE /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2F35C1C73CB82000D34DE /* IQUIView+IQKeyboardToolbar.swift */; };
+		5CA2F36C1C73CB82000D34DE /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5CA2F35D1C73CB82000D34DE /* IQKeyboardManager.bundle */; };
+		5CEE73841C779D1C005E406E /* RegistrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE73831C779D1C005E406E /* RegistrarViewController.swift */; };
+		5CEE73861C77D371005E406E /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE73851C77D371005E406E /* PerfilViewController.swift */; };
+		5CF509341C6E848400D837A2 /* CALayer+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF509171C6E848400D837A2 /* CALayer+FSExtension.m */; };
+		5CF509351C6E848400D837A2 /* FSCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF509191C6E848400D837A2 /* FSCalendar.m */; };
+		5CF509361C6E848400D837A2 /* FSCalendar+IBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF5091B1C6E848400D837A2 /* FSCalendar+IBExtension.m */; };
+		5CF509371C6E848400D837A2 /* FSCalendarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF5091D1C6E848400D837A2 /* FSCalendarAppearance.m */; };
+		5CF509381C6E848400D837A2 /* FSCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF5091F1C6E848400D837A2 /* FSCalendarCell.m */; };
+		5CF509391C6E848400D837A2 /* FSCalendarCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF509211C6E848400D837A2 /* FSCalendarCollectionView.m */; };
+		5CF5093A1C6E848400D837A2 /* FSCalendarConstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF509231C6E848400D837A2 /* FSCalendarConstance.m */; };
+		5CF5093B1C6E848400D837A2 /* FSCalendarEventIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF509261C6E848400D837A2 /* FSCalendarEventIndicator.m */; };
+		5CF5093C1C6E848400D837A2 /* FSCalendarFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF509281C6E848400D837A2 /* FSCalendarFlowLayout.m */; };
+		5CF5093D1C6E848400D837A2 /* FSCalendarHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF5092A1C6E848400D837A2 /* FSCalendarHeader.m */; };
+		5CF5093E1C6E848400D837A2 /* FSCalendarStickyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF5092C1C6E848400D837A2 /* FSCalendarStickyHeader.m */; };
+		5CF5093F1C6E848400D837A2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CF5092D1C6E848400D837A2 /* Info.plist */; };
+		5CF509401C6E848400D837A2 /* NSDate+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF5092F1C6E848400D837A2 /* NSDate+FSExtension.m */; };
+		5CF509411C6E848400D837A2 /* NSString+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF509311C6E848400D837A2 /* NSString+FSExtension.m */; };
+		5CF509421C6E848400D837A2 /* UIView+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF509331C6E848400D837A2 /* UIView+FSExtension.m */; };
 		5CFFBB2D1C651F7100A33148 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFFBB2C1C651F7100A33148 /* AppDelegate.swift */; };
 		5CFFBB2F1C651F7100A33148 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFFBB2E1C651F7100A33148 /* ViewController.swift */; };
 		5CFFBB321C651F7200A33148 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CFFBB301C651F7200A33148 /* Main.storyboard */; };
 		5CFFBB341C651F7200A33148 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CFFBB331C651F7200A33148 /* Assets.xcassets */; };
 		5CFFBB371C651F7200A33148 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CFFBB351C651F7200A33148 /* LaunchScreen.storyboard */; };
+		5CFFBB411C652C9B00A33148 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CFFBB3F1C652C9B00A33148 /* OpenSans-Regular.ttf */; };
+		5CFFBB421C652C9B00A33148 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CFFBB401C652C9B00A33148 /* OpenSans-Semibold.ttf */; };
+		FD69606D38D736866258BF57 /* Pods_Aprende_y_Crece.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E74D9C9D52ADE8FF65E7962 /* Pods_Aprende_y_Crece.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C01BF9F1C6E719400C0EDEC /* NuevoIngresoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuevoIngresoViewController.swift; sourceTree = "<group>"; };
+		5C01BFA11C6E71B700C0EDEC /* NuevoEgresoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuevoEgresoViewController.swift; sourceTree = "<group>"; };
+		5C01BFA31C6E83B900C0EDEC /* FSCalendar */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FSCalendar; sourceTree = "<group>"; };
+		5C0587F21C8C9D9A00BE885A /* ContrasenaFaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContrasenaFaceViewController.swift; sourceTree = "<group>"; };
+		5C1207441C89C9330050DBDA /* MetaInicialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaInicialViewController.swift; sourceTree = "<group>"; };
+		5C1FE4C41C7E9CF70032D24E /* MiMetaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiMetaViewController.swift; sourceTree = "<group>"; };
+		5C1FE4C61C7E9E600032D24E /* ProgresoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgresoViewController.swift; sourceTree = "<group>"; };
+		5C227C961C6955F40000B6CD /* UICountingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICountingLabel.swift; sourceTree = "<group>"; };
+		5C227C981C6956CB0000B6CD /* MiCarteraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiCarteraViewController.swift; sourceTree = "<group>"; };
+		5C265F561C8632C700A5C0F8 /* ProgresoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgresoTableViewCell.swift; sourceTree = "<group>"; };
+		5C35F1F91C87E2C20030B988 /* AjustesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AjustesTableViewController.swift; sourceTree = "<group>"; };
+		5C5505621C7660A7000B6AB2 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		5C5505631C7660A7000B6AB2 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		5C55056A1C7666F0000B6AB2 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
+		5C55056B1C7666F0000B6AB2 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
+		5C5505701C7669D4000B6AB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5C5505721C766AB9000B6AB2 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		5C5505741C766ABE000B6AB2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		5C5505761C766AC7000B6AB2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5C5505781C766BD7000B6AB2 /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
+		5C72CC731C754329008B4F87 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5C72CC751C754384008B4F87 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
+		5C72CC761C754384008B4F87 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		5CA2F34B1C728E01000D34DE /* JHProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHProgressHUD.swift; sourceTree = "<group>"; };
+		5CA2F34D1C728ECB000D34DE /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
+		5CA2F34F1C73CB82000D34DE /* IQKeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManager.swift; sourceTree = "<group>"; };
+		5CA2F3501C73CB82000D34DE /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
+		5CA2F3511C73CB82000D34DE /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
+		5CA2F3521C73CB82000D34DE /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
+		5CA2F3531C73CB82000D34DE /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
+		5CA2F3541C73CB82000D34DE /* IQUIViewController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIViewController+Additions.swift"; sourceTree = "<group>"; };
+		5CA2F3551C73CB82000D34DE /* IQUIWindow+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIWindow+Hierarchy.swift"; sourceTree = "<group>"; };
+		5CA2F3561C73CB82000D34DE /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
+		5CA2F3571C73CB82000D34DE /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
+		5CA2F3581C73CB82000D34DE /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
+		5CA2F3591C73CB82000D34DE /* IQBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQBarButtonItem.swift; sourceTree = "<group>"; };
+		5CA2F35A1C73CB82000D34DE /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
+		5CA2F35B1C73CB82000D34DE /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
+		5CA2F35C1C73CB82000D34DE /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
+		5CA2F35D1C73CB82000D34DE /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		5CEE73831C779D1C005E406E /* RegistrarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrarViewController.swift; sourceTree = "<group>"; };
+		5CEE73851C77D371005E406E /* PerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		5CF509131C6E846900D837A2 /* Aprende y Crece-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aprende y Crece-Bridging-Header.h"; sourceTree = "<group>"; };
+		5CF509161C6E848400D837A2 /* CALayer+FSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+FSExtension.h"; sourceTree = "<group>"; };
+		5CF509171C6E848400D837A2 /* CALayer+FSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+FSExtension.m"; sourceTree = "<group>"; };
+		5CF509181C6E848400D837A2 /* FSCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendar.h; sourceTree = "<group>"; };
+		5CF509191C6E848400D837A2 /* FSCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendar.m; sourceTree = "<group>"; };
+		5CF5091A1C6E848400D837A2 /* FSCalendar+IBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCalendar+IBExtension.h"; sourceTree = "<group>"; };
+		5CF5091B1C6E848400D837A2 /* FSCalendar+IBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCalendar+IBExtension.m"; sourceTree = "<group>"; };
+		5CF5091C1C6E848400D837A2 /* FSCalendarAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarAppearance.h; sourceTree = "<group>"; };
+		5CF5091D1C6E848400D837A2 /* FSCalendarAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarAppearance.m; sourceTree = "<group>"; };
+		5CF5091E1C6E848400D837A2 /* FSCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCell.h; sourceTree = "<group>"; };
+		5CF5091F1C6E848400D837A2 /* FSCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCell.m; sourceTree = "<group>"; };
+		5CF509201C6E848400D837A2 /* FSCalendarCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCollectionView.h; sourceTree = "<group>"; };
+		5CF509211C6E848400D837A2 /* FSCalendarCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCollectionView.m; sourceTree = "<group>"; };
+		5CF509221C6E848400D837A2 /* FSCalendarConstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarConstance.h; sourceTree = "<group>"; };
+		5CF509231C6E848400D837A2 /* FSCalendarConstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarConstance.m; sourceTree = "<group>"; };
+		5CF509241C6E848400D837A2 /* FSCalendarDynamicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarDynamicHeader.h; sourceTree = "<group>"; };
+		5CF509251C6E848400D837A2 /* FSCalendarEventIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarEventIndicator.h; sourceTree = "<group>"; };
+		5CF509261C6E848400D837A2 /* FSCalendarEventIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarEventIndicator.m; sourceTree = "<group>"; };
+		5CF509271C6E848400D837A2 /* FSCalendarFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarFlowLayout.h; sourceTree = "<group>"; };
+		5CF509281C6E848400D837A2 /* FSCalendarFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarFlowLayout.m; sourceTree = "<group>"; };
+		5CF509291C6E848400D837A2 /* FSCalendarHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarHeader.h; sourceTree = "<group>"; };
+		5CF5092A1C6E848400D837A2 /* FSCalendarHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarHeader.m; sourceTree = "<group>"; };
+		5CF5092B1C6E848400D837A2 /* FSCalendarStickyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarStickyHeader.h; sourceTree = "<group>"; };
+		5CF5092C1C6E848400D837A2 /* FSCalendarStickyHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarStickyHeader.m; sourceTree = "<group>"; };
+		5CF5092D1C6E848400D837A2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CF5092E1C6E848400D837A2 /* NSDate+FSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+FSExtension.h"; sourceTree = "<group>"; };
+		5CF5092F1C6E848400D837A2 /* NSDate+FSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+FSExtension.m"; sourceTree = "<group>"; };
+		5CF509301C6E848400D837A2 /* NSString+FSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FSExtension.h"; sourceTree = "<group>"; };
+		5CF509311C6E848400D837A2 /* NSString+FSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FSExtension.m"; sourceTree = "<group>"; };
+		5CF509321C6E848400D837A2 /* UIView+FSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FSExtension.h"; sourceTree = "<group>"; };
+		5CF509331C6E848400D837A2 /* UIView+FSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FSExtension.m"; sourceTree = "<group>"; };
 		5CFFBB291C651F7100A33148 /* Aprende y Crece.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aprende y Crece.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CFFBB2C1C651F7100A33148 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CFFBB2E1C651F7100A33148 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +155,11 @@
 		5CFFBB331C651F7200A33148 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CFFBB361C651F7200A33148 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CFFBB381C651F7200A33148 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CFFBB3F1C652C9B00A33148 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		5CFFBB401C652C9B00A33148 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		6E74D9C9D52ADE8FF65E7962 /* Pods_Aprende_y_Crece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aprende_y_Crece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		783543ACC0451C93B5D877E9 /* Pods-Aprende y Crece.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aprende y Crece.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aprende y Crece/Pods-Aprende y Crece.release.xcconfig"; sourceTree = "<group>"; };
+		CFCB73217AD5259869568631 /* Pods-Aprende y Crece.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aprende y Crece.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aprende y Crece/Pods-Aprende y Crece.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +167,109 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C5505791C766BD7000B6AB2 /* libz.1.1.3.tbd in Frameworks */,
+				5C5505771C766AC7000B6AB2 /* SystemConfiguration.framework in Frameworks */,
+				5C5505751C766ABE000B6AB2 /* StoreKit.framework in Frameworks */,
+				5C5505731C766AB9000B6AB2 /* AddressBook.framework in Frameworks */,
+				FD69606D38D736866258BF57 /* Pods_Aprende_y_Crece.framework in Frameworks */,
+				5C5505661C7660A7000B6AB2 /* FBSDKCoreKit.framework in Frameworks */,
+				5C5505671C7660A7000B6AB2 /* FBSDKLoginKit.framework in Frameworks */,
+				5C55056D1C7666F0000B6AB2 /* GoogleSignIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07553D01E501D3436754EB30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C5505781C766BD7000B6AB2 /* libz.1.1.3.tbd */,
+				5C5505761C766AC7000B6AB2 /* SystemConfiguration.framework */,
+				5C5505741C766ABE000B6AB2 /* StoreKit.framework */,
+				5C5505721C766AB9000B6AB2 /* AddressBook.framework */,
+				5C55056A1C7666F0000B6AB2 /* GoogleSignIn.bundle */,
+				5C55056B1C7666F0000B6AB2 /* GoogleSignIn.framework */,
+				5C5505621C7660A7000B6AB2 /* FBSDKCoreKit.framework */,
+				5C5505631C7660A7000B6AB2 /* FBSDKLoginKit.framework */,
+				6E74D9C9D52ADE8FF65E7962 /* Pods_Aprende_y_Crece.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C227C951C6955D30000B6CD /* Clases Auxiliares */ = {
+			isa = PBXGroup;
+			children = (
+				5CA2F36D1C73CB8E000D34DE /* Textfields */,
+				5CF509161C6E848400D837A2 /* CALayer+FSExtension.h */,
+				5CF509171C6E848400D837A2 /* CALayer+FSExtension.m */,
+				5CF509181C6E848400D837A2 /* FSCalendar.h */,
+				5CF509191C6E848400D837A2 /* FSCalendar.m */,
+				5CF5091A1C6E848400D837A2 /* FSCalendar+IBExtension.h */,
+				5CF5091B1C6E848400D837A2 /* FSCalendar+IBExtension.m */,
+				5CF5091C1C6E848400D837A2 /* FSCalendarAppearance.h */,
+				5CF5091D1C6E848400D837A2 /* FSCalendarAppearance.m */,
+				5CF5091E1C6E848400D837A2 /* FSCalendarCell.h */,
+				5CF5091F1C6E848400D837A2 /* FSCalendarCell.m */,
+				5CF509201C6E848400D837A2 /* FSCalendarCollectionView.h */,
+				5CF509211C6E848400D837A2 /* FSCalendarCollectionView.m */,
+				5CF509221C6E848400D837A2 /* FSCalendarConstance.h */,
+				5CF509231C6E848400D837A2 /* FSCalendarConstance.m */,
+				5CF509241C6E848400D837A2 /* FSCalendarDynamicHeader.h */,
+				5CF509251C6E848400D837A2 /* FSCalendarEventIndicator.h */,
+				5CF509261C6E848400D837A2 /* FSCalendarEventIndicator.m */,
+				5CF509271C6E848400D837A2 /* FSCalendarFlowLayout.h */,
+				5CF509281C6E848400D837A2 /* FSCalendarFlowLayout.m */,
+				5CF509291C6E848400D837A2 /* FSCalendarHeader.h */,
+				5CF5092A1C6E848400D837A2 /* FSCalendarHeader.m */,
+				5CF5092B1C6E848400D837A2 /* FSCalendarStickyHeader.h */,
+				5CF5092C1C6E848400D837A2 /* FSCalendarStickyHeader.m */,
+				5CF5092D1C6E848400D837A2 /* Info.plist */,
+				5CF5092E1C6E848400D837A2 /* NSDate+FSExtension.h */,
+				5CF5092F1C6E848400D837A2 /* NSDate+FSExtension.m */,
+				5CF509301C6E848400D837A2 /* NSString+FSExtension.h */,
+				5CF509311C6E848400D837A2 /* NSString+FSExtension.m */,
+				5CF509321C6E848400D837A2 /* UIView+FSExtension.h */,
+				5CF509331C6E848400D837A2 /* UIView+FSExtension.m */,
+				5C01BFA31C6E83B900C0EDEC /* FSCalendar */,
+				5C227C961C6955F40000B6CD /* UICountingLabel.swift */,
+				5CA2F34D1C728ECB000D34DE /* SCLAlertView.swift */,
+				5CA2F34B1C728E01000D34DE /* JHProgressHUD.swift */,
+			);
+			name = "Clases Auxiliares";
+			sourceTree = "<group>";
+		};
+		5CA2F36D1C73CB8E000D34DE /* Textfields */ = {
+			isa = PBXGroup;
+			children = (
+				5CA2F34F1C73CB82000D34DE /* IQKeyboardManager.swift */,
+				5CA2F3501C73CB82000D34DE /* IQKeyboardReturnKeyHandler.swift */,
+				5CA2F3511C73CB82000D34DE /* IQNSArray+Sort.swift */,
+				5CA2F3521C73CB82000D34DE /* IQUITextFieldView+Additions.swift */,
+				5CA2F3531C73CB82000D34DE /* IQUIView+Hierarchy.swift */,
+				5CA2F3541C73CB82000D34DE /* IQUIViewController+Additions.swift */,
+				5CA2F3551C73CB82000D34DE /* IQUIWindow+Hierarchy.swift */,
+				5CA2F3561C73CB82000D34DE /* IQKeyboardManagerConstants.swift */,
+				5CA2F3571C73CB82000D34DE /* IQKeyboardManagerConstantsInternal.swift */,
+				5CA2F3581C73CB82000D34DE /* IQTextView.swift */,
+				5CA2F3591C73CB82000D34DE /* IQBarButtonItem.swift */,
+				5CA2F35A1C73CB82000D34DE /* IQTitleBarButtonItem.swift */,
+				5CA2F35B1C73CB82000D34DE /* IQToolbar.swift */,
+				5CA2F35C1C73CB82000D34DE /* IQUIView+IQKeyboardToolbar.swift */,
+				5CA2F35D1C73CB82000D34DE /* IQKeyboardManager.bundle */,
+			);
+			name = Textfields;
+			sourceTree = "<group>";
+		};
 		5CFFBB201C651F7100A33148 = {
 			isa = PBXGroup;
 			children = (
 				5CFFBB2B1C651F7100A33148 /* Aprende y Crece */,
+				5CFFBB3E1C652C3F00A33148 /* Fuentes */,
+				5C227C951C6955D30000B6CD /* Clases Auxiliares */,
 				5CFFBB2A1C651F7100A33148 /* Products */,
+				C3442E6E6680AE0D9718B6CC /* Pods */,
+				07553D01E501D3436754EB30 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +286,46 @@
 			children = (
 				5CFFBB2C1C651F7100A33148 /* AppDelegate.swift */,
 				5CFFBB2E1C651F7100A33148 /* ViewController.swift */,
+				5C227C981C6956CB0000B6CD /* MiCarteraViewController.swift */,
+				5CEE73851C77D371005E406E /* PerfilViewController.swift */,
+				5C01BF9F1C6E719400C0EDEC /* NuevoIngresoViewController.swift */,
+				5C01BFA11C6E71B700C0EDEC /* NuevoEgresoViewController.swift */,
+				5C1207441C89C9330050DBDA /* MetaInicialViewController.swift */,
+				5C1FE4C41C7E9CF70032D24E /* MiMetaViewController.swift */,
+				5C1FE4C61C7E9E600032D24E /* ProgresoViewController.swift */,
+				5C265F561C8632C700A5C0F8 /* ProgresoTableViewCell.swift */,
 				5CFFBB301C651F7200A33148 /* Main.storyboard */,
 				5CFFBB331C651F7200A33148 /* Assets.xcassets */,
+				5C72CC731C754329008B4F87 /* LoginViewController.swift */,
+				5CEE73831C779D1C005E406E /* RegistrarViewController.swift */,
+				5C0587F21C8C9D9A00BE885A /* ContrasenaFaceViewController.swift */,
+				5C72CC751C754384008B4F87 /* PageContentViewController.swift */,
+				5C72CC761C754384008B4F87 /* PageViewController.swift */,
+				5C35F1F91C87E2C20030B988 /* AjustesTableViewController.swift */,
 				5CFFBB351C651F7200A33148 /* LaunchScreen.storyboard */,
 				5CFFBB381C651F7200A33148 /* Info.plist */,
+				5C5505701C7669D4000B6AB2 /* GoogleService-Info.plist */,
+				5CF509131C6E846900D837A2 /* Aprende y Crece-Bridging-Header.h */,
 			);
 			path = "Aprende y Crece";
+			sourceTree = "<group>";
+		};
+		5CFFBB3E1C652C3F00A33148 /* Fuentes */ = {
+			isa = PBXGroup;
+			children = (
+				5CFFBB3F1C652C9B00A33148 /* OpenSans-Regular.ttf */,
+				5CFFBB401C652C9B00A33148 /* OpenSans-Semibold.ttf */,
+			);
+			name = Fuentes;
+			sourceTree = "<group>";
+		};
+		C3442E6E6680AE0D9718B6CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CFCB73217AD5259869568631 /* Pods-Aprende y Crece.debug.xcconfig */,
+				783543ACC0451C93B5D877E9 /* Pods-Aprende y Crece.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +335,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5CFFBB3B1C651F7200A33148 /* Build configuration list for PBXNativeTarget "Aprende y Crece" */;
 			buildPhases = (
+				C5B8B7A470C72E50194A85C9 /* Check Pods Manifest.lock */,
 				5CFFBB251C651F7100A33148 /* Sources */,
 				5CFFBB261C651F7100A33148 /* Frameworks */,
 				5CFFBB271C651F7100A33148 /* Resources */,
+				286446F58E19C5F54D7E4E42 /* Embed Pods Frameworks */,
+				C84265C17ED2822E89202BA1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,7 +363,7 @@
 				TargetAttributes = {
 					5CFFBB281C651F7100A33148 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 4CC32L2BH8;
+						DevelopmentTeam = REK84A4F47;
 					};
 				};
 			};
@@ -124,20 +391,120 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CFFBB371C651F7200A33148 /* LaunchScreen.storyboard in Resources */,
+				5C01BFA41C6E83B900C0EDEC /* FSCalendar in Resources */,
 				5CFFBB341C651F7200A33148 /* Assets.xcassets in Resources */,
+				5CFFBB411C652C9B00A33148 /* OpenSans-Regular.ttf in Resources */,
+				5C55056C1C7666F0000B6AB2 /* GoogleSignIn.bundle in Resources */,
 				5CFFBB321C651F7200A33148 /* Main.storyboard in Resources */,
+				5CFFBB421C652C9B00A33148 /* OpenSans-Semibold.ttf in Resources */,
+				5C5505711C7669D4000B6AB2 /* GoogleService-Info.plist in Resources */,
+				5CA2F36C1C73CB82000D34DE /* IQKeyboardManager.bundle in Resources */,
+				5CF5093F1C6E848400D837A2 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		286446F58E19C5F54D7E4E42 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aprende y Crece/Pods-Aprende y Crece-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5B8B7A470C72E50194A85C9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C84265C17ED2822E89202BA1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aprende y Crece/Pods-Aprende y Crece-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5CFFBB251C651F7100A33148 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CF509341C6E848400D837A2 /* CALayer+FSExtension.m in Sources */,
+				5CA2F3601C73CB82000D34DE /* IQNSArray+Sort.swift in Sources */,
+				5CF5093A1C6E848400D837A2 /* FSCalendarConstance.m in Sources */,
+				5CA2F35F1C73CB82000D34DE /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				5CFFBB2F1C651F7100A33148 /* ViewController.swift in Sources */,
+				5CA2F3671C73CB82000D34DE /* IQTextView.swift in Sources */,
+				5CA2F34C1C728E02000D34DE /* JHProgressHUD.swift in Sources */,
+				5CF509351C6E848400D837A2 /* FSCalendar.m in Sources */,
+				5CA2F36A1C73CB82000D34DE /* IQToolbar.swift in Sources */,
+				5C01BFA01C6E719400C0EDEC /* NuevoIngresoViewController.swift in Sources */,
+				5CF509371C6E848400D837A2 /* FSCalendarAppearance.m in Sources */,
+				5C1FE4C51C7E9CF70032D24E /* MiMetaViewController.swift in Sources */,
+				5C227C971C6955F40000B6CD /* UICountingLabel.swift in Sources */,
+				5CA2F3631C73CB82000D34DE /* IQUIViewController+Additions.swift in Sources */,
+				5CF5093E1C6E848400D837A2 /* FSCalendarStickyHeader.m in Sources */,
+				5CF509411C6E848400D837A2 /* NSString+FSExtension.m in Sources */,
+				5CA2F3611C73CB82000D34DE /* IQUITextFieldView+Additions.swift in Sources */,
+				5C0587F31C8C9D9B00BE885A /* ContrasenaFaceViewController.swift in Sources */,
+				5CF5093B1C6E848400D837A2 /* FSCalendarEventIndicator.m in Sources */,
+				5CF509401C6E848400D837A2 /* NSDate+FSExtension.m in Sources */,
+				5CA2F36B1C73CB82000D34DE /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				5CFFBB2D1C651F7100A33148 /* AppDelegate.swift in Sources */,
+				5CF5093D1C6E848400D837A2 /* FSCalendarHeader.m in Sources */,
+				5CF509421C6E848400D837A2 /* UIView+FSExtension.m in Sources */,
+				5CF5093C1C6E848400D837A2 /* FSCalendarFlowLayout.m in Sources */,
+				5CF509391C6E848400D837A2 /* FSCalendarCollectionView.m in Sources */,
+				5C35F1FA1C87E2C20030B988 /* AjustesTableViewController.swift in Sources */,
+				5C72CC741C754329008B4F87 /* LoginViewController.swift in Sources */,
+				5CA2F35E1C73CB82000D34DE /* IQKeyboardManager.swift in Sources */,
+				5C1FE4C71C7E9E600032D24E /* ProgresoViewController.swift in Sources */,
+				5CEE73841C779D1C005E406E /* RegistrarViewController.swift in Sources */,
+				5CF509361C6E848400D837A2 /* FSCalendar+IBExtension.m in Sources */,
+				5C265F571C8632C700A5C0F8 /* ProgresoTableViewCell.swift in Sources */,
+				5CA2F3681C73CB82000D34DE /* IQBarButtonItem.swift in Sources */,
+				5CA2F3621C73CB82000D34DE /* IQUIView+Hierarchy.swift in Sources */,
+				5CF509381C6E848400D837A2 /* FSCalendarCell.m in Sources */,
+				5C1207451C89C9330050DBDA /* MetaInicialViewController.swift in Sources */,
+				5CA2F3641C73CB82000D34DE /* IQUIWindow+Hierarchy.swift in Sources */,
+				5C227C991C6956CB0000B6CD /* MiCarteraViewController.swift in Sources */,
+				5CA2F34E1C728ECB000D34DE /* SCLAlertView.swift in Sources */,
+				5C72CC771C754384008B4F87 /* PageContentViewController.swift in Sources */,
+				5CA2F3661C73CB82000D34DE /* IQKeyboardManagerConstantsInternal.swift in Sources */,
+				5CA2F3691C73CB82000D34DE /* IQTitleBarButtonItem.swift in Sources */,
+				5C72CC781C754384008B4F87 /* PageViewController.swift in Sources */,
+				5CA2F3651C73CB82000D34DE /* IQKeyboardManagerConstants.swift in Sources */,
+				5CEE73861C77D371005E406E /* PerfilViewController.swift in Sources */,
+				5C01BFA21C6E71B700C0EDEC /* NuevoEgresoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +566,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -238,7 +605,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -248,25 +615,60 @@
 		};
 		5CFFBB3C1C651F7200A33148 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFCB73217AD5259869568631 /* Pods-Aprende y Crece.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Aprende y Crece/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"GaugeKit\"",
+					"-framework",
+					"\"XLActionController\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.somospulso.Aprende-y-Crece";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Aprende y Crece/Aprende y Crece-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		5CFFBB3D1C651F7200A33148 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 783543ACC0451C93B5D877E9 /* Pods-Aprende y Crece.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Aprende y Crece/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"GaugeKit\"",
+					"-framework",
+					"\"XLActionController\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.somospulso.Aprende-y-Crece";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Aprende y Crece/Aprende y Crece-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -289,6 +691,7 @@
 				5CFFBB3D1C651F7200A33148 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

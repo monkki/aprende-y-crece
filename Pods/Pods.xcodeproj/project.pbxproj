@@ -1,0 +1,847 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0291689FFFA508F24B2F3D8A15699FBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE437620300D81EED04DF8C0301AF9D9 /* Foundation.framework */; };
+		09D93EFA894107FFB253D2995B81A840 /* GaugeKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9354199409B41CF031848A6B6E07CE70 /* GaugeKit.bundle */; };
+		10D2836E2C91CED0A36F0D1672AA3F28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE437620300D81EED04DF8C0301AF9D9 /* Foundation.framework */; };
+		1162A4C0866E47054B3CEEA25746C9C2 /* XLActionController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 278BDFFE12343C69B81F214BEE4A81C8 /* XLActionController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22144A61ABE2507ED567CB58EEB5B8EA /* Gauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CC00E138A46DAC1E6A270685F0347C /* Gauge.swift */; };
+		2342A8B7D737942AB655AFF520807D3A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50084CE643257D421CF2ADC2016DDDD /* Action.swift */; };
+		2A4D1F1CF505DB4BCDBEBD14B682184D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED04AE2201316F6590E7AD9952706C7B /* UIKit.framework */; };
+		3A86D02786AD0101EF5A0094DB288DB1 /* GaugeHalf.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA0239674380546349678CE35861EBD /* GaugeHalf.swift */; };
+		44527A035CDDDD5779768EBEAEDAA92D /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B249C308F108642CA109F7A2E2C9C /* ActionCell.swift */; };
+		52FE733E6600BD8C70D3ADF2CF586979 /* Skype.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEE74E651818D2BC77B49B4913C010E /* Skype.swift */; };
+		60F289D82DE6E13F3C427BC66F380AE2 /* DynamicCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5741807AB9E06BDFE8D5A2F28FB85CD /* DynamicCollectionViewFlowLayout.swift */; };
+		6A375361B1CE1CE2AB79B226CB3C9047 /* ActionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A766E784476719AE646462D946078B /* ActionController.swift */; };
+		6BB4EEEAA5BBC9DBA3F98D2C2CB897F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED04AE2201316F6590E7AD9952706C7B /* UIKit.framework */; };
+		7A5E8EDC6B377F8D46EBA292E6488168 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE437620300D81EED04DF8C0301AF9D9 /* Foundation.framework */; };
+		82AAB0547FE05E527B62E78013A8CA6C /* XLActionController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A78B3A655EE0074E059DC1AE3DB7B03 /* XLActionController-dummy.m */; };
+		853FD59257E2DFD0D006C0DAEBA2D009 /* GaugeKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316F665452B56DB0B0DB9DD2088B422 /* GaugeKit-dummy.m */; };
+		8FF4267E80A7229490D365E526B931B0 /* GaugeKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C784CF33E8528E097638A268F63E70D /* GaugeKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96F65403631B8CF3D5A02C9192A0F1E4 /* GaugeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D422DE572B4B088DFD5EB97FD92DDC1 /* GaugeLine.swift */; };
+		9E70EB7744F9193C2561F41348CDD363 /* ActionCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = 23E96833BF7DD075892F758D916D3A51 /* ActionCell.xib */; };
+		AE48CC3B65D3FCE6FA4BECD9D6688E66 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE7FD0E16F3FACCFE19068F1E872D9F /* CoreGraphics.framework */; };
+		B9B61BDCB43DEE7763AFC2657853BADA /* Pods-Aprende y Crece-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C965D8B54B34E66CE21771C1921E061C /* Pods-Aprende y Crece-dummy.m */; };
+		CD3D54BD25D1A0609BB643339156884A /* CAShapeLayer+oval.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56019EFEB7C2076F98741731801689C /* CAShapeLayer+oval.swift */; };
+		DD79A90CBD809B50AC33F14999DC7E0F /* ActionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C59860E730A813436F4B23335167B /* ActionData.swift */; };
+		DF0D633E2EA46B1775DAD3B53380F87C /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 8DF387AC6F6EA8BF1EDF1FD03306437B /* Info.plist */; };
+		E06BECFC9AF0831243AD169B60D0B501 /* ActionControllerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4301378F2DF45BBF41D9AE26A75BD63 /* ActionControllerSettings.swift */; };
+		E20A69ADF2A866D868BD89D66F8F23B2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD25CA4A497622D5ABF4C433D79E4DE /* QuartzCore.framework */; };
+		E7A24E164487408C42D482535B9CAD99 /* GaugeCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7AAFCA980B6E96E3851C630A301921 /* GaugeCircle.swift */; };
+		EA1AB086A8877AD0C339F29BAE8E6545 /* Pods-Aprende y Crece-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D652298EE56BED7219E2610138E0F40 /* Pods-Aprende y Crece-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F508D03A4D47AF3CC7A332FBB739357C /* SkypeCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = 940F5BA0C6843B016E3F1D64DD85556C /* SkypeCell.xib */; };
+		FBBEA0562BCAF2CD38F51C8914859513 /* GaugeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 56B5BAE0F9D3C4EB60933410FF750029 /* GaugeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2EA4562AFEF807290A754E7F584D852B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BEA20E23605FF676FBB0275C5E9F4F2;
+			remoteInfo = XLActionController;
+		};
+		7E58D6369A96D1A30927FFC6F807FD2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 122253C62F330ED922A7C46D47CF8DC2;
+			remoteInfo = GaugeKit;
+		};
+		BCE3C900C71165D23D28B353AF7E3A0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CC3AC85291D76DF4348A46011097C3C;
+			remoteInfo = "GaugeKit-GaugeKit";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09669A4E0EEC00473A127C2BF82A8167 /* Pods-Aprende y Crece-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Aprende y Crece-acknowledgements.plist"; sourceTree = "<group>"; };
+		0DD25CA4A497622D5ABF4C433D79E4DE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		16AFE398D202F8022A986F6D99E93F92 /* Pods-Aprende y Crece-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Aprende y Crece-frameworks.sh"; sourceTree = "<group>"; };
+		1D652298EE56BED7219E2610138E0F40 /* Pods-Aprende y Crece-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Aprende y Crece-umbrella.h"; sourceTree = "<group>"; };
+		227B249C308F108642CA109F7A2E2C9C /* ActionCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionCell.swift; path = Source/ActionCell.swift; sourceTree = "<group>"; };
+		23E96833BF7DD075892F758D916D3A51 /* ActionCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ActionCell.xib; path = Source/ActionCell.xib; sourceTree = "<group>"; };
+		278BDFFE12343C69B81F214BEE4A81C8 /* XLActionController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLActionController-umbrella.h"; sourceTree = "<group>"; };
+		3A78B3A655EE0074E059DC1AE3DB7B03 /* XLActionController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLActionController-dummy.m"; sourceTree = "<group>"; };
+		3AEE74E651818D2BC77B49B4913C010E /* Skype.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Skype.swift; path = Example/CustomActionControllers/Skype.swift; sourceTree = "<group>"; };
+		3B583E0947BDE68143E544E91C90586C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D422DE572B4B088DFD5EB97FD92DDC1 /* GaugeLine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GaugeLine.swift; path = GaugeKit/GaugeLine.swift; sourceTree = "<group>"; };
+		41D4EF0BBF762498AE143EFE1B309E2D /* GaugeKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GaugeKit-prefix.pch"; sourceTree = "<group>"; };
+		43E33CF377917DD2F87DAAC7FC3A98A0 /* Pods-Aprende y Crece.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Aprende y Crece.modulemap"; sourceTree = "<group>"; };
+		4AE7FD0E16F3FACCFE19068F1E872D9F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		5021CB7964677B25D94F53A0ED023F4B /* Pods-Aprende y Crece-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Aprende y Crece-resources.sh"; sourceTree = "<group>"; };
+		5066739AF379D5EEA4F6AEB59AD63EF4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51030F49271C29B6DF7257ABB853AB9E /* Pods-Aprende y Crece.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Aprende y Crece.release.xcconfig"; sourceTree = "<group>"; };
+		56B5BAE0F9D3C4EB60933410FF750029 /* GaugeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GaugeKit.h; path = GaugeKit/GaugeKit.h; sourceTree = "<group>"; };
+		5EEF4318D521060DCF5B8754AF56A1A5 /* GaugeKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = GaugeKit.modulemap; sourceTree = "<group>"; };
+		6B7AAFCA980B6E96E3851C630A301921 /* GaugeCircle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GaugeCircle.swift; path = GaugeKit/GaugeCircle.swift; sourceTree = "<group>"; };
+		7316F665452B56DB0B0DB9DD2088B422 /* GaugeKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GaugeKit-dummy.m"; sourceTree = "<group>"; };
+		79194291A6A4E403908295F57A59949F /* XLActionController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLActionController.xcconfig; sourceTree = "<group>"; };
+		7BA166C6DEE479F5309CF5E249C98256 /* Pods_Aprende_y_Crece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aprende_y_Crece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C784CF33E8528E097638A268F63E70D /* GaugeKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GaugeKit-umbrella.h"; sourceTree = "<group>"; };
+		80BE7B99D14BC309FCF08A682ABB4C84 /* Pods-Aprende y Crece.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Aprende y Crece.debug.xcconfig"; sourceTree = "<group>"; };
+		884B20782ED6DCA28AD0D54D2463C8C3 /* XLActionController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = XLActionController.modulemap; sourceTree = "<group>"; };
+		8DF387AC6F6EA8BF1EDF1FD03306437B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = GaugeKit/Info.plist; sourceTree = "<group>"; };
+		91CC00E138A46DAC1E6A270685F0347C /* Gauge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Gauge.swift; path = GaugeKit/Gauge.swift; sourceTree = "<group>"; };
+		9354199409B41CF031848A6B6E07CE70 /* GaugeKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GaugeKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		940F5BA0C6843B016E3F1D64DD85556C /* SkypeCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SkypeCell.xib; path = Example/CustomActionControllers/SkypeCell.xib; sourceTree = "<group>"; };
+		AE91482436076492BB395F53E49D7BEA /* GaugeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GaugeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2A766E784476719AE646462D946078B /* ActionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionController.swift; path = Source/ActionController.swift; sourceTree = "<group>"; };
+		B4301378F2DF45BBF41D9AE26A75BD63 /* ActionControllerSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionControllerSettings.swift; path = Source/ActionControllerSettings.swift; sourceTree = "<group>"; };
+		B5741807AB9E06BDFE8D5A2F28FB85CD /* DynamicCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicCollectionViewFlowLayout.swift; path = Source/DynamicCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BAA0239674380546349678CE35861EBD /* GaugeHalf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GaugeHalf.swift; path = GaugeKit/GaugeHalf.swift; sourceTree = "<group>"; };
+		C56019EFEB7C2076F98741731801689C /* CAShapeLayer+oval.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CAShapeLayer+oval.swift"; path = "GaugeKit/CAShapeLayer+oval.swift"; sourceTree = "<group>"; };
+		C62C59860E730A813436F4B23335167B /* ActionData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionData.swift; path = Example/CustomActionControllers/ActionData.swift; sourceTree = "<group>"; };
+		C965D8B54B34E66CE21771C1921E061C /* Pods-Aprende y Crece-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Aprende y Crece-dummy.m"; sourceTree = "<group>"; };
+		CE437620300D81EED04DF8C0301AF9D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D5D1BC9CF80CEB3D0AD1D9D7A49D6417 /* XLActionController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLActionController-prefix.pch"; sourceTree = "<group>"; };
+		E7F1819DD840B743E0997271F96E6B45 /* XLActionController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XLActionController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED04AE2201316F6590E7AD9952706C7B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F50084CE643257D421CF2ADC2016DDDD /* Action.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Action.swift; path = Source/Action.swift; sourceTree = "<group>"; };
+		F709F188E383A97BFFB20A6DE55C8744 /* GaugeKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GaugeKit.xcconfig; sourceTree = "<group>"; };
+		F8549890562E4BEFD24DCCC9E2BEE1DA /* Pods-Aprende y Crece-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Aprende y Crece-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FF5CEF5806B9E4253D66A8BA54DBF9F8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A961071EAC3E4620606E2224AC585FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E379E6A3A444A2BEB3348ACBAD9AE10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0291689FFFA508F24B2F3D8A15699FBE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0D5824E1298F6CDB9A722195699BA0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A5E8EDC6B377F8D46EBA292E6488168 /* Foundation.framework in Frameworks */,
+				E20A69ADF2A866D868BD89D66F8F23B2 /* QuartzCore.framework in Frameworks */,
+				6BB4EEEAA5BBC9DBA3F98D2C2CB897F8 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA74757C36BDE8E4B12B26FFF17401C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE48CC3B65D3FCE6FA4BECD9D6688E66 /* CoreGraphics.framework in Frameworks */,
+				10D2836E2C91CED0A36F0D1672AA3F28 /* Foundation.framework in Frameworks */,
+				2A4D1F1CF505DB4BCDBEBD14B682184D /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0CCC9A80B9E699B0D82708709A0E32E2 /* XLActionController */ = {
+			isa = PBXGroup;
+			children = (
+				CE71C367A70566227CD9D9F9637D859C /* Core */,
+				17279A3FE8D5C0C58BC0D3F8E3CCB15E /* Skype */,
+				DCA14E535DB403CBB6FF82B51E6DAD11 /* Support Files */,
+			);
+			path = XLActionController;
+			sourceTree = "<group>";
+		};
+		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9203A0FF197B8764CD853B6EE3A159E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		17279A3FE8D5C0C58BC0D3F8E3CCB15E /* Skype */ = {
+			isa = PBXGroup;
+			children = (
+				C62C59860E730A813436F4B23335167B /* ActionData.swift */,
+				3AEE74E651818D2BC77B49B4913C010E /* Skype.swift */,
+				940F5BA0C6843B016E3F1D64DD85556C /* SkypeCell.xib */,
+			);
+			name = Skype;
+			sourceTree = "<group>";
+		};
+		2D9477F579F29643A1626E85BDE2493B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9354199409B41CF031848A6B6E07CE70 /* GaugeKit.bundle */,
+				AE91482436076492BB395F53E49D7BEA /* GaugeKit.framework */,
+				7BA166C6DEE479F5309CF5E249C98256 /* Pods_Aprende_y_Crece.framework */,
+				E7F1819DD840B743E0997271F96E6B45 /* XLActionController.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
+				C5648D157A19EEA4BEA35B37A68DE3A2 /* Pods */,
+				2D9477F579F29643A1626E85BDE2493B /* Products */,
+				F895A89270AF082C07FDA94BA24FB101 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		81866662161A52FD821B526AB806827B /* Pods-Aprende y Crece */ = {
+			isa = PBXGroup;
+			children = (
+				3B583E0947BDE68143E544E91C90586C /* Info.plist */,
+				43E33CF377917DD2F87DAAC7FC3A98A0 /* Pods-Aprende y Crece.modulemap */,
+				F8549890562E4BEFD24DCCC9E2BEE1DA /* Pods-Aprende y Crece-acknowledgements.markdown */,
+				09669A4E0EEC00473A127C2BF82A8167 /* Pods-Aprende y Crece-acknowledgements.plist */,
+				C965D8B54B34E66CE21771C1921E061C /* Pods-Aprende y Crece-dummy.m */,
+				16AFE398D202F8022A986F6D99E93F92 /* Pods-Aprende y Crece-frameworks.sh */,
+				5021CB7964677B25D94F53A0ED023F4B /* Pods-Aprende y Crece-resources.sh */,
+				1D652298EE56BED7219E2610138E0F40 /* Pods-Aprende y Crece-umbrella.h */,
+				80BE7B99D14BC309FCF08A682ABB4C84 /* Pods-Aprende y Crece.debug.xcconfig */,
+				51030F49271C29B6DF7257ABB853AB9E /* Pods-Aprende y Crece.release.xcconfig */,
+			);
+			name = "Pods-Aprende y Crece";
+			path = "Target Support Files/Pods-Aprende y Crece";
+			sourceTree = "<group>";
+		};
+		A9203A0FF197B8764CD853B6EE3A159E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4AE7FD0E16F3FACCFE19068F1E872D9F /* CoreGraphics.framework */,
+				CE437620300D81EED04DF8C0301AF9D9 /* Foundation.framework */,
+				0DD25CA4A497622D5ABF4C433D79E4DE /* QuartzCore.framework */,
+				ED04AE2201316F6590E7AD9952706C7B /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C5648D157A19EEA4BEA35B37A68DE3A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA4A991EB4CA132A7189F3F3F924F33E /* GaugeKit */,
+				0CCC9A80B9E699B0D82708709A0E32E2 /* XLActionController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CC92D77CC3F4DB0ABD8593B3436A22E6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5EEF4318D521060DCF5B8754AF56A1A5 /* GaugeKit.modulemap */,
+				F709F188E383A97BFFB20A6DE55C8744 /* GaugeKit.xcconfig */,
+				7316F665452B56DB0B0DB9DD2088B422 /* GaugeKit-dummy.m */,
+				41D4EF0BBF762498AE143EFE1B309E2D /* GaugeKit-prefix.pch */,
+				7C784CF33E8528E097638A268F63E70D /* GaugeKit-umbrella.h */,
+				5066739AF379D5EEA4F6AEB59AD63EF4 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GaugeKit";
+			sourceTree = "<group>";
+		};
+		CE71C367A70566227CD9D9F9637D859C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F50084CE643257D421CF2ADC2016DDDD /* Action.swift */,
+				227B249C308F108642CA109F7A2E2C9C /* ActionCell.swift */,
+				23E96833BF7DD075892F758D916D3A51 /* ActionCell.xib */,
+				B2A766E784476719AE646462D946078B /* ActionController.swift */,
+				B4301378F2DF45BBF41D9AE26A75BD63 /* ActionControllerSettings.swift */,
+				B5741807AB9E06BDFE8D5A2F28FB85CD /* DynamicCollectionViewFlowLayout.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		DA4A991EB4CA132A7189F3F3F924F33E /* GaugeKit */ = {
+			isa = PBXGroup;
+			children = (
+				C56019EFEB7C2076F98741731801689C /* CAShapeLayer+oval.swift */,
+				91CC00E138A46DAC1E6A270685F0347C /* Gauge.swift */,
+				6B7AAFCA980B6E96E3851C630A301921 /* GaugeCircle.swift */,
+				BAA0239674380546349678CE35861EBD /* GaugeHalf.swift */,
+				56B5BAE0F9D3C4EB60933410FF750029 /* GaugeKit.h */,
+				3D422DE572B4B088DFD5EB97FD92DDC1 /* GaugeLine.swift */,
+				8DF387AC6F6EA8BF1EDF1FD03306437B /* Info.plist */,
+				CC92D77CC3F4DB0ABD8593B3436A22E6 /* Support Files */,
+			);
+			path = GaugeKit;
+			sourceTree = "<group>";
+		};
+		DCA14E535DB403CBB6FF82B51E6DAD11 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF5CEF5806B9E4253D66A8BA54DBF9F8 /* Info.plist */,
+				884B20782ED6DCA28AD0D54D2463C8C3 /* XLActionController.modulemap */,
+				79194291A6A4E403908295F57A59949F /* XLActionController.xcconfig */,
+				3A78B3A655EE0074E059DC1AE3DB7B03 /* XLActionController-dummy.m */,
+				D5D1BC9CF80CEB3D0AD1D9D7A49D6417 /* XLActionController-prefix.pch */,
+				278BDFFE12343C69B81F214BEE4A81C8 /* XLActionController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/XLActionController";
+			sourceTree = "<group>";
+		};
+		F895A89270AF082C07FDA94BA24FB101 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				81866662161A52FD821B526AB806827B /* Pods-Aprende y Crece */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8F08364CC3EC1441EC1AF1AC8474E17E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA1AB086A8877AD0C339F29BAE8E6545 /* Pods-Aprende y Crece-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95A0E762DEBCB3664D7187E1245AE3FB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1162A4C0866E47054B3CEEA25746C9C2 /* XLActionController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A28F27A6A301AEAC7E4372FA411FBC25 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FF4267E80A7229490D365E526B931B0 /* GaugeKit-umbrella.h in Headers */,
+				FBBEA0562BCAF2CD38F51C8914859513 /* GaugeKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0CC3AC85291D76DF4348A46011097C3C /* GaugeKit-GaugeKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58ACB7777887A696C8ACC03D1E4A8066 /* Build configuration list for PBXNativeTarget "GaugeKit-GaugeKit" */;
+			buildPhases = (
+				B8EA1B8AD1003B451DF423DEF9FF68F8 /* Sources */,
+				1A961071EAC3E4620606E2224AC585FB /* Frameworks */,
+				CCB30AC230D653CC39C3553823C3CEEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GaugeKit-GaugeKit";
+			productName = "GaugeKit-GaugeKit";
+			productReference = 9354199409B41CF031848A6B6E07CE70 /* GaugeKit.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		122253C62F330ED922A7C46D47CF8DC2 /* GaugeKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89BE5476222EF5031D4579387C734484 /* Build configuration list for PBXNativeTarget "GaugeKit" */;
+			buildPhases = (
+				D02CF7AA3C49471B0E1249B5D216C88A /* Sources */,
+				A0D5824E1298F6CDB9A722195699BA0B /* Frameworks */,
+				24F136C24175624D5695BD6DFD648FE3 /* Resources */,
+				A28F27A6A301AEAC7E4372FA411FBC25 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC9E55DB0CDC4ADD5FB0D59DF1F0D6C3 /* PBXTargetDependency */,
+			);
+			name = GaugeKit;
+			productName = GaugeKit;
+			productReference = AE91482436076492BB395F53E49D7BEA /* GaugeKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2BEA20E23605FF676FBB0275C5E9F4F2 /* XLActionController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB067D50BCB74A8EF0183807B8402721 /* Build configuration list for PBXNativeTarget "XLActionController" */;
+			buildPhases = (
+				9215CA818779E60637F43C9AF5E655E6 /* Sources */,
+				CA74757C36BDE8E4B12B26FFF17401C7 /* Frameworks */,
+				95A0E762DEBCB3664D7187E1245AE3FB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XLActionController;
+			productName = XLActionController;
+			productReference = E7F1819DD840B743E0997271F96E6B45 /* XLActionController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EDB6B0E16080B68363628E0D8722224C /* Pods-Aprende y Crece */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC38647B4C9D2A1466751C799F706DF4 /* Build configuration list for PBXNativeTarget "Pods-Aprende y Crece" */;
+			buildPhases = (
+				67B9EA771D5B2BEF9127F1808F78673B /* Sources */,
+				6E379E6A3A444A2BEB3348ACBAD9AE10 /* Frameworks */,
+				8F08364CC3EC1441EC1AF1AC8474E17E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8C6E76BB64F149C79F876451826BA46 /* PBXTargetDependency */,
+				D977894C44FE807795D96C339F660B4F /* PBXTargetDependency */,
+			);
+			name = "Pods-Aprende y Crece";
+			productName = "Pods-Aprende y Crece";
+			productReference = 7BA166C6DEE479F5309CF5E249C98256 /* Pods_Aprende_y_Crece.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 2D9477F579F29643A1626E85BDE2493B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				122253C62F330ED922A7C46D47CF8DC2 /* GaugeKit */,
+				0CC3AC85291D76DF4348A46011097C3C /* GaugeKit-GaugeKit */,
+				EDB6B0E16080B68363628E0D8722224C /* Pods-Aprende y Crece */,
+				2BEA20E23605FF676FBB0275C5E9F4F2 /* XLActionController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24F136C24175624D5695BD6DFD648FE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09D93EFA894107FFB253D2995B81A840 /* GaugeKit.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCB30AC230D653CC39C3553823C3CEEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67B9EA771D5B2BEF9127F1808F78673B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9B61BDCB43DEE7763AFC2657853BADA /* Pods-Aprende y Crece-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9215CA818779E60637F43C9AF5E655E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2342A8B7D737942AB655AFF520807D3A /* Action.swift in Sources */,
+				44527A035CDDDD5779768EBEAEDAA92D /* ActionCell.swift in Sources */,
+				9E70EB7744F9193C2561F41348CDD363 /* ActionCell.xib in Sources */,
+				6A375361B1CE1CE2AB79B226CB3C9047 /* ActionController.swift in Sources */,
+				E06BECFC9AF0831243AD169B60D0B501 /* ActionControllerSettings.swift in Sources */,
+				DD79A90CBD809B50AC33F14999DC7E0F /* ActionData.swift in Sources */,
+				60F289D82DE6E13F3C427BC66F380AE2 /* DynamicCollectionViewFlowLayout.swift in Sources */,
+				52FE733E6600BD8C70D3ADF2CF586979 /* Skype.swift in Sources */,
+				F508D03A4D47AF3CC7A332FBB739357C /* SkypeCell.xib in Sources */,
+				82AAB0547FE05E527B62E78013A8CA6C /* XLActionController-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8EA1B8AD1003B451DF423DEF9FF68F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D02CF7AA3C49471B0E1249B5D216C88A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD3D54BD25D1A0609BB643339156884A /* CAShapeLayer+oval.swift in Sources */,
+				22144A61ABE2507ED567CB58EEB5B8EA /* Gauge.swift in Sources */,
+				E7A24E164487408C42D482535B9CAD99 /* GaugeCircle.swift in Sources */,
+				3A86D02786AD0101EF5A0094DB288DB1 /* GaugeHalf.swift in Sources */,
+				853FD59257E2DFD0D006C0DAEBA2D009 /* GaugeKit-dummy.m in Sources */,
+				96F65403631B8CF3D5A02C9192A0F1E4 /* GaugeLine.swift in Sources */,
+				DF0D633E2EA46B1775DAD3B53380F87C /* Info.plist in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D977894C44FE807795D96C339F660B4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XLActionController;
+			target = 2BEA20E23605FF676FBB0275C5E9F4F2 /* XLActionController */;
+			targetProxy = 2EA4562AFEF807290A754E7F584D852B /* PBXContainerItemProxy */;
+		};
+		E8C6E76BB64F149C79F876451826BA46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GaugeKit;
+			target = 122253C62F330ED922A7C46D47CF8DC2 /* GaugeKit */;
+			targetProxy = 7E58D6369A96D1A30927FFC6F807FD2D /* PBXContainerItemProxy */;
+		};
+		EC9E55DB0CDC4ADD5FB0D59DF1F0D6C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GaugeKit-GaugeKit";
+			target = 0CC3AC85291D76DF4348A46011097C3C /* GaugeKit-GaugeKit */;
+			targetProxy = BCE3C900C71165D23D28B353AF7E3A0A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		026E83CA27108E59C816F215826C32A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F709F188E383A97BFFB20A6DE55C8744 /* GaugeKit.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = GaugeKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		094060D6D03C4FE87588B2855A7DF5F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79194291A6A4E403908295F57A59949F /* XLActionController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/XLActionController/XLActionController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XLActionController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/XLActionController/XLActionController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = XLActionController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		38E98086B57998C37148F1A85F59D5E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51030F49271C29B6DF7257ABB853AB9E /* Pods-Aprende y Crece.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Aprende y Crece/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Aprende y Crece/Pods-Aprende y Crece.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Aprende_y_Crece;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		400C39A282838E15B4E54F6777260DAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F709F188E383A97BFFB20A6DE55C8744 /* GaugeKit.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = GaugeKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		6B04A02A9629495216E717C7B9AC0B48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F709F188E383A97BFFB20A6DE55C8744 /* GaugeKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GaugeKit/GaugeKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GaugeKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GaugeKit/GaugeKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GaugeKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		75637707BBBAE5AEFF009E584C37EDB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F709F188E383A97BFFB20A6DE55C8744 /* GaugeKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GaugeKit/GaugeKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GaugeKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GaugeKit/GaugeKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GaugeKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9F0DDF27EFC54C58984F2E0AA3ED2871 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80BE7B99D14BC309FCF08A682ABB4C84 /* Pods-Aprende y Crece.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Aprende y Crece/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Aprende y Crece/Pods-Aprende y Crece.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Aprende_y_Crece;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A6D6CDDDA3D946A0EA18AE0DAB6B1E9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79194291A6A4E403908295F57A59949F /* XLActionController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/XLActionController/XLActionController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XLActionController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/XLActionController/XLActionController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = XLActionController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58ACB7777887A696C8ACC03D1E4A8066 /* Build configuration list for PBXNativeTarget "GaugeKit-GaugeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				026E83CA27108E59C816F215826C32A9 /* Debug */,
+				400C39A282838E15B4E54F6777260DAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89BE5476222EF5031D4579387C734484 /* Build configuration list for PBXNativeTarget "GaugeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B04A02A9629495216E717C7B9AC0B48 /* Debug */,
+				75637707BBBAE5AEFF009E584C37EDB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB067D50BCB74A8EF0183807B8402721 /* Build configuration list for PBXNativeTarget "XLActionController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				094060D6D03C4FE87588B2855A7DF5F9 /* Debug */,
+				A6D6CDDDA3D946A0EA18AE0DAB6B1E9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC38647B4C9D2A1466751C799F706DF4 /* Build configuration list for PBXNativeTarget "Pods-Aprende y Crece" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F0DDF27EFC54C58984F2E0AA3ED2871 /* Debug */,
+				38E98086B57998C37148F1A85F59D5E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
