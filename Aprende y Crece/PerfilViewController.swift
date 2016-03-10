@@ -157,6 +157,7 @@ class PerfilViewController: UIViewController, UITextFieldDelegate, UITextViewDel
         
         NSUserDefaults.standardUserDefaults().removeObjectForKey("tokenServer")
         NSUserDefaults.standardUserDefaults().removeObjectForKey("fbid")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("Gid")
         NSUserDefaults.standardUserDefaults().removeObjectForKey("idUsuario")
         NSUserDefaults.standardUserDefaults().removeObjectForKey("nombre")
         NSUserDefaults.standardUserDefaults().removeObjectForKey("correo")

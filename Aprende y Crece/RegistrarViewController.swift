@@ -18,6 +18,14 @@ class RegistrarViewController: UIViewController, UITextFieldDelegate, FBSDKLogin
     var apellidoFacebook: String!
     var imagenFacebook: UIImage!
     
+    // DATOS RECIBIDOS DE GOOGLE
+    var nombreCompletoGoogle: String!
+    var idGoogle: String!
+    var emailGoogle: String!
+    var nombreGoogle: String!
+    var apellidoGoogle: String!
+    
+    
     // BOTONES DE LOGIN
     @IBOutlet var botonLoginFacebook: FBSDKLoginButton!
     @IBOutlet weak var signInButton: GIDSignInButton!
@@ -301,6 +309,8 @@ class RegistrarViewController: UIViewController, UITextFieldDelegate, FBSDKLogin
             let name = user.profile.name
             let email = user.profile.email
             
+            
+            
             print("User id " + userId)
             print("Token id " + idToken)
             print("Nombre " + name)
@@ -312,11 +322,22 @@ class RegistrarViewController: UIViewController, UITextFieldDelegate, FBSDKLogin
             let nombre = fullNameArr[0]
             let apellido = fullNameArr[1]
             
+            // DATOS RECIBIDOS DE GOOGLE
+            nombreCompletoGoogle = name
+            idGoogle = userId
+            emailGoogle = email
+            nombreGoogle = nombre
+            apellidoGoogle = apellido
+            
             NSUserDefaults.standardUserDefaults().setObject(nombre, forKey: "nombre")
             NSUserDefaults.standardUserDefaults().setObject(apellido, forKey: "apellido")
             NSUserDefaults.standardUserDefaults().setObject(email, forKey: "correo")
             
-            performSegueWithIdentifier("inicioSegue2", sender: self)
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.4 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
+                self.performSegueWithIdentifier("contrasenaSegue2", sender: self)
+            })
+            
+            //performSegueWithIdentifier("inicioSegue2", sender: self)
             
             
         }
@@ -530,7 +551,19 @@ class RegistrarViewController: UIViewController, UITextFieldDelegate, FBSDKLogin
             destinoVC.nombreFacebook = nombreFacebook
             destinoVC.apellidoFacebook = apellidoFacebook
             
+        } else if segue.identifier == "contrasenaSegue2" {
+            
+            let destinoVC = segue.destinationViewController as! ContrasenaGoogleViewController
+            destinoVC.nombreCompletoGoogle = nombreCompletoGoogle
+            destinoVC.idGoogle = idGoogle
+            destinoVC.emailGoogle = emailGoogle
+            destinoVC.nombreGoogle = nombreGoogle
+            destinoVC.apellidoGoogle = apellidoGoogle
+            
+            
         }
+        
+        
     }
 
     

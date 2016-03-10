@@ -18,6 +18,7 @@
 		5C227C991C6956CB0000B6CD /* MiCarteraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C227C981C6956CB0000B6CD /* MiCarteraViewController.swift */; };
 		5C265F571C8632C700A5C0F8 /* ProgresoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C265F561C8632C700A5C0F8 /* ProgresoTableViewCell.swift */; };
 		5C35F1FA1C87E2C20030B988 /* AjustesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35F1F91C87E2C20030B988 /* AjustesTableViewController.swift */; };
+		5C4C89301C91FD8600BBFA6D /* ContrasenaGoogleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C892F1C91FD8600BBFA6D /* ContrasenaGoogleViewController.swift */; };
 		5C5505661C7660A7000B6AB2 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5505621C7660A7000B6AB2 /* FBSDKCoreKit.framework */; };
 		5C5505671C7660A7000B6AB2 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5505631C7660A7000B6AB2 /* FBSDKLoginKit.framework */; };
 		5C55056C1C7666F0000B6AB2 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5C55056A1C7666F0000B6AB2 /* GoogleSignIn.bundle */; };
@@ -86,6 +87,7 @@
 		5C227C981C6956CB0000B6CD /* MiCarteraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiCarteraViewController.swift; sourceTree = "<group>"; };
 		5C265F561C8632C700A5C0F8 /* ProgresoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgresoTableViewCell.swift; sourceTree = "<group>"; };
 		5C35F1F91C87E2C20030B988 /* AjustesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AjustesTableViewController.swift; sourceTree = "<group>"; };
+		5C4C892F1C91FD8600BBFA6D /* ContrasenaGoogleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContrasenaGoogleViewController.swift; sourceTree = "<group>"; };
 		5C5505621C7660A7000B6AB2 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		5C5505631C7660A7000B6AB2 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		5C55056A1C7666F0000B6AB2 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 				5C72CC731C754329008B4F87 /* LoginViewController.swift */,
 				5CEE73831C779D1C005E406E /* RegistrarViewController.swift */,
 				5C0587F21C8C9D9A00BE885A /* ContrasenaFaceViewController.swift */,
+				5C4C892F1C91FD8600BBFA6D /* ContrasenaGoogleViewController.swift */,
 				5C72CC751C754384008B4F87 /* PageContentViewController.swift */,
 				5C72CC761C754384008B4F87 /* PageViewController.swift */,
 				5C35F1F91C87E2C20030B988 /* AjustesTableViewController.swift */,
@@ -499,6 +502,7 @@
 				5C227C991C6956CB0000B6CD /* MiCarteraViewController.swift in Sources */,
 				5CA2F34E1C728ECB000D34DE /* SCLAlertView.swift in Sources */,
 				5C72CC771C754384008B4F87 /* PageContentViewController.swift in Sources */,
+				5C4C89301C91FD8600BBFA6D /* ContrasenaGoogleViewController.swift in Sources */,
 				5CA2F3661C73CB82000D34DE /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				5CA2F3691C73CB82000D34DE /* IQTitleBarButtonItem.swift in Sources */,
 				5C72CC781C754384008B4F87 /* PageViewController.swift in Sources */,
