@@ -64,8 +64,6 @@ class MiCarteraViewController: UIViewController {
         
         obtenerIngresos()
         
-        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "GaugePresupuestoEstimado", userInfo: nil, repeats: false)
-        
         
     }
     
@@ -75,8 +73,8 @@ class MiCarteraViewController: UIViewController {
         
     }
     
-    func GaugePresupuestoEstimado() {
-        self.miPresupuestoEstimadoGauge.rate = 7
+    func GaugePresupuestoEstimado(numero: Int) {
+        self.miPresupuestoEstimadoGauge.rate = CGFloat(numero)
     }
 
     
@@ -144,7 +142,8 @@ class MiCarteraViewController: UIViewController {
                             print(self.repetirArrayIngresos)
                             
                             // PENDIENTES DE AGREGAR VALORES
-                            self.miPresupuestoEstimadoLabel.countFrom(0, endValue: 8980.00, duration: 1.5)
+                            self.miPresupuestoEstimadoLabel.countFrom(0, endValue: 0.00, duration: 1.5)
+                            self.GaugePresupuestoEstimado(5)
                             self.miCarteraLabel.countFrom(0, endValue: 0, duration: 1.5)
                             self.miCuentaBancariaLabel.countFrom(0, endValue: 0, duration: 1.5)
                             

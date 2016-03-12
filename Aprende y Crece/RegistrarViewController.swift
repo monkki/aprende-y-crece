@@ -146,7 +146,7 @@ class RegistrarViewController: UIViewController, UITextFieldDelegate, FBSDKLogin
     
     func returnUserData() {
         
-        JHProgressHUD.sharedHUD.showInView(self.view, withHeader: "Logeando usuario", andFooter: "Por favor espere...")
+        JHProgressHUD.sharedHUD.showInView(self.view, withHeader: "Registrando usuario", andFooter: "Por favor espere...")
         
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "email, name, picture.type(large), first_name, last_name"])
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
@@ -272,6 +272,8 @@ class RegistrarViewController: UIViewController, UITextFieldDelegate, FBSDKLogin
         else {
             print(GIDSignIn.sharedInstance().currentUser.profile.imageURLWithDimension(150))
             
+            JHProgressHUD.sharedHUD.showInView(self.view, withHeader: "Registrando usuario", andFooter: "Por favor espere...")
+            
             let url = GIDSignIn.sharedInstance().currentUser.profile.imageURLWithDimension(150)
             
             // Obtener foto de Google
@@ -334,6 +336,7 @@ class RegistrarViewController: UIViewController, UITextFieldDelegate, FBSDKLogin
             NSUserDefaults.standardUserDefaults().setObject(email, forKey: "correo")
             
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.4 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
+                JHProgressHUD.sharedHUD.hide()
                 self.performSegueWithIdentifier("contrasenaSegue2", sender: self)
             })
             
