@@ -10,6 +10,8 @@ import UIKit
 
 class ProgresoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+
+    
     var fechasArray = [String]()
     var ingresosArray = [String]()
     var egresosArray = [String]()

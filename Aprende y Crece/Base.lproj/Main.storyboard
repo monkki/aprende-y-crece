@@ -1058,6 +1058,13 @@
                         <outlet property="gaugeIngresoMiercoles" destination="QC0-Wh-8MV" id="Oc8-mL-S6c"/>
                         <outlet property="gaugeIngresoSabado" destination="8VO-Ln-7n6" id="5Vh-gU-IX4"/>
                         <outlet property="gaugeIngresoViernes" destination="u14-JX-SYM" id="DuC-Zo-dT9"/>
+                        <outlet property="imagenMarcadorDomingo" destination="hGW-Hl-7jI" id="Ge4-16-jgi"/>
+                        <outlet property="imagenMarcadorJueves" destination="olo-St-Qu9" id="4rt-YZ-8Rn"/>
+                        <outlet property="imagenMarcadorLunes" destination="WeQ-GJ-UuX" id="qYV-HV-sSR"/>
+                        <outlet property="imagenMarcadorMartes" destination="pgh-Hn-Iur" id="L6J-EK-9Vs"/>
+                        <outlet property="imagenMarcadorMiercoles" destination="UVP-xR-LqN" id="J1C-em-BCM"/>
+                        <outlet property="imagenMarcadorSabado" destination="T6e-dG-f4v" id="pwN-f0-j2Q"/>
+                        <outlet property="imagenMarcadorViernes" destination="IQP-al-03Q" id="nWZ-Zj-fUP"/>
                         <outlet property="montoAhorrarLabel" destination="LDG-r5-TiZ" id="yLg-km-IBZ"/>
                         <outlet property="nombreMetaLabel" destination="QMs-Fe-yck" id="cww-qe-fXy"/>
                     </connections>

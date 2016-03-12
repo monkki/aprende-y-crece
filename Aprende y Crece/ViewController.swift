@@ -19,6 +19,33 @@ class ViewController: UIViewController {
     @IBOutlet var fechaTerminoLabel: UILabel!
     @IBOutlet var montoAhorrarLabel: UILabel!
     
+    @IBOutlet var imagenMarcadorLunes: UIImageView!
+    @IBOutlet var imagenMarcadorMartes: UIImageView!
+    @IBOutlet var imagenMarcadorMiercoles: UIImageView!
+    @IBOutlet var imagenMarcadorJueves: UIImageView!
+    @IBOutlet var imagenMarcadorViernes: UIImageView!
+    @IBOutlet var imagenMarcadorSabado: UIImageView!
+    @IBOutlet var imagenMarcadorDomingo: UIImageView!
+    
+    
+    // Variables de Gauges
+    var ingreso_lunes = "0"
+    var ingreso_martes = "0"
+    var ingreso_miercoles = "0"
+    var ingreso_jueves = "0"
+    var ingreso_viernes = "0"
+    var ingreso_sabado = "0"
+    var ingreso_domingo = "0"
+    
+    var egreso_lunes = "0"
+    var egreso_martes = "0"
+    var egreso_miercoles = "0"
+    var egreso_jueves = "0"
+    var egreso_viernes = "0"
+    var egreso_sabado = "0"
+    var egreso_domingo = "0"
+
+    
     
     //Variables
     // idUsuario
@@ -117,21 +144,6 @@ class ViewController: UIViewController {
         
         obtenerDatosMeta()
         
-        NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "GaugeILunes", userInfo: nil, repeats: false)
-        NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: "GaugeIMartes", userInfo: nil, repeats: false)
-        NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "GaugeIMiercoles", userInfo: nil, repeats: false)
-        NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "GaugeIJueves", userInfo: nil, repeats: false)
-        NSTimer.scheduledTimerWithTimeInterval(0.6, target: self, selector: "GaugeIViernes", userInfo: nil, repeats: false)
-        NSTimer.scheduledTimerWithTimeInterval(0.7, target: self, selector: "GaugeISabado", userInfo: nil, repeats: false)
-        NSTimer.scheduledTimerWithTimeInterval(0.8, target: self, selector: "GaugeIDomingo", userInfo: nil, repeats: false)
-        NSTimer.scheduledTimerWithTimeInterval(0.9, target: self, selector: "GaugeELunes", userInfo: nil, repeats: false)
-        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "GaugeEMartes", userInfo: nil, repeats: false)
-        NSTimer.scheduledTimerWithTimeInterval(1.1, target: self, selector: "GaugeEMiercoles", userInfo: nil, repeats: false)
-        NSTimer.scheduledTimerWithTimeInterval(1.2, target: self, selector: "GaugeEJueves", userInfo: nil, repeats: false)
-        NSTimer.scheduledTimerWithTimeInterval(1.3, target: self, selector: "GaugeEViernes", userInfo: nil, repeats: false)
-        NSTimer.scheduledTimerWithTimeInterval(1.4, target: self, selector: "GaugeESabado", userInfo: nil, repeats: false)
-        NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: "GaugeEDomingo", userInfo: nil, repeats: false)
-        
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -154,59 +166,157 @@ class ViewController: UIViewController {
     }
     
     func GaugeILunes() {
-        self.gaugeIngresoLunes.rate = 2
+        
+        let ingreso: Float = Float(self.ingreso_lunes)!
+        
+        let monto: Float = ((ingreso * 100) / Float(self.montoMeta)!) * 0.1
+        
+        print("Medidor de gauge lunes es  \(monto)")
+        
+        self.gaugeIngresoLunes.rate = CGFloat(monto * 4)
     }
     
     func GaugeIMartes() {
-        self.gaugeIngresoMartes.rate = 9
+        
+        let ingreso: Float = Float(self.ingreso_martes)!
+        
+        let monto: Float = ((ingreso * 100) / Float(self.montoMeta)!) * 0.1
+        
+        print("Medidor de gauge martes es  \(monto)")
+
+        self.gaugeIngresoMartes.rate = CGFloat(monto * 4)
     }
     
     func GaugeIMiercoles() {
-        self.gaugeIngresoMiercoles.rate = 6
+        
+        let ingreso: Float = Float(self.ingreso_miercoles)!
+        
+        let monto: Float = ((ingreso * 100) / Float(self.montoMeta)!) * 0.1
+        
+        print("Medidor de gauge miercoles es  \(monto)")
+        
+        self.gaugeIngresoMiercoles.rate = CGFloat(monto * 4)
     }
     
     func GaugeIJueves() {
-        self.gaugeIngresoJueves.rate = 1
+        
+        let ingreso: Float = Float(self.ingreso_jueves)!
+        
+        let monto: Float = ((ingreso * 100) / Float(self.montoMeta)!) * 0.1
+        
+        print("Medidor de gauge jueves es  \(monto)")
+        
+        self.gaugeIngresoJueves.rate = CGFloat(monto * 4)
     }
     
     func GaugeIViernes() {
-        self.gaugeIngresoViernes.rate = 3
+        
+        let ingreso: Float = Float(self.ingreso_viernes)!
+        
+        let monto: Float = ((ingreso * 100) / Float(self.montoMeta)!) * 0.1
+        
+        print("Medidor de gauge viernes es  \(monto)")
+        
+        self.gaugeIngresoViernes.rate = CGFloat(monto * 4)
     }
     
     func GaugeISabado() {
-        self.gaugeIngresoSabado.rate = 8
+        
+        let ingreso: Float = Float(self.ingreso_sabado)!
+        
+        let monto: Float = ((ingreso * 100) / Float(self.montoMeta)!) * 0.1
+        
+        print("Medidor de gauge sabado es  \(monto)")
+        
+        self.gaugeIngresoSabado.rate = CGFloat(monto * 4)
     }
     
     func GaugeIDomingo() {
-        self.gaugeIngresoDomingo.rate = 4
+        
+        let ingreso: Float = Float(self.ingreso_domingo)!
+        
+        let monto: Float = ((ingreso * 100) / Float(self.montoMeta)!) * 0.1
+        
+        print("Medidor de gauge domingo es  \(monto)")
+        
+        self.gaugeIngresoDomingo.rate = CGFloat(monto * 4)
     }
     
     func GaugeELunes() {
-        self.gaugeEgresoLunes.rate = 9
+        
+        let egreso: Float = Float(self.egreso_lunes)!
+        
+        let monto: Float = ((egreso * 100) / Float(self.montoMeta)!) * 0.1
+        
+        print("Medidor de gauge egreso lunes es  \(monto)")
+        
+        self.gaugeEgresoLunes.rate = CGFloat(monto * 4)
     }
     
     func GaugeEMartes() {
-        self.gaugeEgresoMartes.rate = 3
+        
+        let egreso: Float = Float(self.egreso_martes)!
+        
+        let monto: Float = ((egreso * 100) / Float(self.montoMeta)!) * 0.1
+        
+        print("Medidor de gauge egreso martes es  \(monto)")
+        
+        self.gaugeEgresoMartes.rate = CGFloat(monto * 4)
     }
     
     func GaugeEMiercoles() {
-        self.gaugeEgresoMiercoles.rate = 7
+        
+        let egreso: Float = Float(self.egreso_miercoles)!
+        
+        let monto: Float = ((egreso * 100) / Float(self.montoMeta)!) * 0.1
+        
+        print("Medidor de gauge egreso miercoles es  \(monto)")
+        
+        self.gaugeEgresoMiercoles.rate = CGFloat(monto * 4)
     }
     
     func GaugeEJueves() {
-        self.gaugeEgresoJueves.rate = 8
+        
+        let egreso: Float = Float(self.egreso_jueves)!
+        
+        let monto: Float = ((egreso * 100) / Float(self.montoMeta)!) * 0.1
+        
+        print("Medidor de gauge egreso jueves es  \(monto)")
+        
+        self.gaugeEgresoJueves.rate = CGFloat(monto * 4)
     }
     
     func GaugeEViernes() {
-        self.gaugeEgresoViernes.rate = 1
+        
+        let egreso: Float = Float(self.egreso_viernes)!
+        
+        let monto: Float = ((egreso * 100) / Float(self.montoMeta)!) * 0.1
+        
+        print("Medidor de gauge egreso viernes es  \(monto)")
+        
+        self.gaugeEgresoViernes.rate = CGFloat(monto * 4)
     }
     
     func GaugeESabado() {
-        self.gaugeEgresoSabado.rate = 2
+        
+        let egreso: Float = Float(self.egreso_sabado)!
+        
+        let monto: Float = ((egreso * 100) / Float(self.montoMeta)!) * 0.1
+        
+        print("Medidor de gauge egreso sabado es  \(monto)")
+        
+        self.gaugeEgresoSabado.rate = CGFloat(monto * 4)
     }
     
     func GaugeEDomingo() {
-        self.gaugeEgresoDomingo.rate = 9
+        
+        let egreso: Float = Float(self.egreso_domingo)!
+        
+        let monto: Float = ((egreso * 100) / Float(self.montoMeta)!) * 0.1
+        
+        print("Medidor de gauge egreso domingo es  \(monto)")
+        
+        self.gaugeEgresoDomingo.rate = CGFloat(monto * 4)
     }
    
     
@@ -221,7 +331,7 @@ class ViewController: UIViewController {
     
     func obtenerDatosMeta() {
         
-        let urlString = "http://intercubo.com/aprendeycrece/api/obtenerMeta.php?idUsuario=" + String(idUsuario)
+        let urlString = "http://intercubo.com/aprendeycrece/api/diasSemana.php?idUsuario=" + String(idUsuario)
         
         let url = NSURL(string: urlString)
         
@@ -253,6 +363,117 @@ class ViewController: UIViewController {
                                 self.montoMinimo = json["montoMinimo"] as! String
                                 self.nombreMeta = json["nombreMeta"] as! String
                                 
+                        // INGRESOS
+                                
+                                if let ingreso_lunes = json["ingreso_lunes"] as? String {
+                                    self.ingreso_lunes = ingreso_lunes
+                                } else if let _ = json["ingreso_lunes"] as? NSNull {
+                                    self.ingreso_lunes = "0"
+                                }
+                                
+                                if let ingreso_martes = json["ingreso_martes"] as? String {
+                                    self.ingreso_martes = ingreso_martes
+                                } else if let _ = json["ingreso_martes"] as? NSNull {
+                                    self.ingreso_martes = "0"
+                                }
+                                
+                                if let ingreso_miercoles = json["ingreso_miercoles"] as? String {
+                                    self.ingreso_miercoles = ingreso_miercoles
+                                } else if let _ = json["ingreso_miercoles"] as? NSNull {
+                                    self.ingreso_miercoles = "0"
+                                }
+
+                                if let ingreso_jueves = json["ingreso_jueves"] as? String {
+                                    self.ingreso_jueves = ingreso_jueves
+                                } else if let _ = json["ingreso_jueves"] as? NSNull {
+                                    self.ingreso_jueves = "0"
+                                }
+                                
+                                if let ingreso_viernes = json["ingreso_viernes"] as? String {
+                                    self.ingreso_viernes = ingreso_viernes
+                                } else if let _ = json["ingreso_viernes"] as? NSNull {
+                                    self.ingreso_viernes = "0"
+                                }
+                                
+                                if let ingreso_sabado = json["ingreso_sabado"] as? String {
+                                    self.ingreso_sabado = ingreso_sabado
+                                } else if let _ = json["ingreso_sabado"] as? NSNull {
+                                    self.ingreso_sabado = "0"
+                                }
+                                
+                                if let ingreso_domingo = json["ingreso_domingo"] as? String {
+                                    self.ingreso_domingo = ingreso_domingo
+                                } else if let _ = json["ingreso_domingo"] as? NSNull {
+                                    self.ingreso_domingo = "0"
+                                }
+
+                        // EGRESOS
+                                
+                                if let egreso_lunes = json["egreso_lunes"] as? String {
+                                    self.egreso_lunes = egreso_lunes
+                                } else if let _ = json["egreso_lunes"] as? NSNull {
+                                    self.egreso_lunes = "0"
+                                }
+                                
+                                if let egreso_martes = json["egreso_martes"] as? String {
+                                    self.egreso_martes = egreso_martes
+                                } else if let _ = json["egreso_martes"] as? NSNull {
+                                    self.egreso_martes = "0"
+                                }
+                                
+                                if let egreso_miercoles = json["egreso_miercoles"] as? String {
+                                    self.egreso_miercoles = egreso_miercoles
+                                } else if let _ = json["egreso_miercoles"] as? NSNull {
+                                    self.egreso_miercoles = "0"
+                                }
+                                
+                                if let egreso_jueves = json["egreso_jueves"] as? String {
+                                    self.egreso_jueves = egreso_jueves
+                                } else if let _ = json["egreso_jueves"] as? NSNull {
+                                    self.egreso_jueves = "0"
+                                }
+                                
+                                if let egreso_viernes = json["egreso_viernes"] as? String {
+                                    self.egreso_viernes = egreso_viernes
+                                } else if let _ = json["egreso_viernes"] as? NSNull {
+                                    self.egreso_viernes = "0"
+                                }
+                                
+                                if let egreso_sabado = json["egreso_sabado"] as? String {
+                                    self.egreso_sabado = egreso_sabado
+                                } else if let _ = json["egreso_sabado"] as? NSNull {
+                                    self.egreso_sabado = "0"
+                                }
+                                
+                                if let egreso_domingo = json["egreso_domingo"] as? String {
+                                    self.ingreso_domingo = egreso_domingo
+                                } else if let _ = json["egreso_domingo"] as? NSNull {
+                                    self.egreso_domingo = "0"
+                                }
+                                
+                                
+
+                                /*
+                                
+                                ((monto * 100) / metaTotal) * 0.1
+                                
+                                print(self.ingreso_lunes)
+                                print(self.ingreso_martes)
+                                print(self.ingreso_miercoles)
+                                print(self.ingreso_jueves)
+                                print(self.ingreso_viernes)
+                                print(self.ingreso_sabado)
+                                print(self.ingreso_domingo)
+                                
+                                print(self.egreso_lunes)
+                                print(self.egreso_martes)
+                                print(self.egreso_miercoles)
+                                print(self.egreso_jueves)
+                                print(self.egreso_viernes)
+                                print(self.egreso_sabado)
+                                print(self.egreso_domingo)
+                                */
+                                
                                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                                     
                                     self.nombreMetaLabel.text = self.nombreMeta
@@ -260,6 +481,63 @@ class ViewController: UIViewController {
                                     self.fechaTerminoLabel.text = "Fecha limite: \(self.fechaTermino)"
                                     self.montoAhorrarLabel.text = "dia $" + self.montoMinimo
                                     
+                                    if self.ingreso_lunes > self.egreso_lunes {
+                                        self.imagenMarcadorLunes.image = UIImage(named: "indicadorPalomita")
+                                    } else {
+                                        self.imagenMarcadorLunes.image = UIImage(named: "indicadorCruz")
+                                    }
+                                    
+                                    if self.ingreso_martes > self.egreso_martes {
+                                        self.imagenMarcadorMartes.image = UIImage(named: "indicadorPalomita")
+                                    } else {
+                                        self.imagenMarcadorMartes.image = UIImage(named: "indicadorCruz")
+                                    }
+                                    
+                                    if self.ingreso_miercoles > self.egreso_miercoles {
+                                        self.imagenMarcadorMiercoles.image = UIImage(named: "indicadorPalomita")
+                                    } else {
+                                        self.imagenMarcadorMiercoles.image = UIImage(named: "indicadorCruz")
+                                    }
+                                    
+                                    if self.ingreso_jueves > self.egreso_jueves {
+                                        self.imagenMarcadorJueves.image = UIImage(named: "indicadorPalomita")
+                                    } else {
+                                        self.imagenMarcadorJueves.image = UIImage(named: "indicadorCruz")
+                                    }
+                                    
+                                    if self.ingreso_viernes > self.egreso_viernes {
+                                        self.imagenMarcadorViernes.image = UIImage(named: "indicadorPalomita")
+                                    } else {
+                                        self.imagenMarcadorViernes.image = UIImage(named: "indicadorCruz")
+                                    }
+                                    
+                                    if self.ingreso_sabado > self.egreso_sabado {
+                                        self.imagenMarcadorSabado.image = UIImage(named: "indicadorPalomita")
+                                    } else {
+                                        self.imagenMarcadorSabado.image = UIImage(named: "indicadorCruz")
+                                    }
+                                    
+                                    if self.ingreso_domingo > self.egreso_domingo {
+                                        self.imagenMarcadorDomingo.image = UIImage(named: "indicadorPalomita")
+                                    } else {
+                                        self.imagenMarcadorDomingo.image = UIImage(named: "indicadorCruz")
+                                    }
+                                    
+                                    
+                                    NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "GaugeILunes", userInfo: nil, repeats: false)
+                                    NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: "GaugeIMartes", userInfo: nil, repeats: false)
+                                    NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "GaugeIMiercoles", userInfo: nil, repeats: false)
+                                    NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "GaugeIJueves", userInfo: nil, repeats: false)
+                                    NSTimer.scheduledTimerWithTimeInterval(0.6, target: self, selector: "GaugeIViernes", userInfo: nil, repeats: false)
+                                    NSTimer.scheduledTimerWithTimeInterval(0.7, target: self, selector: "GaugeISabado", userInfo: nil, repeats: false)
+                                    NSTimer.scheduledTimerWithTimeInterval(0.8, target: self, selector: "GaugeIDomingo", userInfo: nil, repeats: false)
+                                    NSTimer.scheduledTimerWithTimeInterval(0.9, target: self, selector: "GaugeELunes", userInfo: nil, repeats: false)
+                                    NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "GaugeEMartes", userInfo: nil, repeats: false)
+                                    NSTimer.scheduledTimerWithTimeInterval(1.1, target: self, selector: "GaugeEMiercoles", userInfo: nil, repeats: false)
+                                    NSTimer.scheduledTimerWithTimeInterval(1.2, target: self, selector: "GaugeEJueves", userInfo: nil, repeats: false)
+                                    NSTimer.scheduledTimerWithTimeInterval(1.3, target: self, selector: "GaugeEViernes", userInfo: nil, repeats: false)
+                                    NSTimer.scheduledTimerWithTimeInterval(1.4, target: self, selector: "GaugeESabado", userInfo: nil, repeats: false)
+                                    NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: "GaugeEDomingo", userInfo: nil, repeats: false)
                                 })
                                 
                                 
