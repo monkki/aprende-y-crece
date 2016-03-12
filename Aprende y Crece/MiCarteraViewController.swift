@@ -143,7 +143,6 @@ class MiCarteraViewController: UIViewController {
                             
                             // PENDIENTES DE AGREGAR VALORES
                             self.miPresupuestoEstimadoLabel.countFrom(0, endValue: 0.00, duration: 1.5)
-                            self.GaugePresupuestoEstimado(5)
                             self.miCarteraLabel.countFrom(0, endValue: 0, duration: 1.5)
                             self.miCuentaBancariaLabel.countFrom(0, endValue: 0, duration: 1.5)
                             
@@ -227,6 +226,10 @@ class MiCarteraViewController: UIViewController {
                             
                             print("La suma de otros es \(sumaDeOtros)")
                             
+                            
+                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                self.GaugePresupuestoEstimado(5)
+                            })
                             
                             
                         } else {
