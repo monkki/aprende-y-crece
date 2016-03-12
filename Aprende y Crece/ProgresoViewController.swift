@@ -13,12 +13,14 @@ class ProgresoViewController: UIViewController, UITableViewDelegate, UITableView
     var fechasArray = [String]()
     var ingresosArray = [String]()
     var egresosArray = [String]()
+    var montoMeta: String = "0"
     
-    var idUsuario = "1234"
+    var idUsuario = NSUserDefaults.standardUserDefaults().objectForKey("idUsuario") as! Int
     
     // Consulta para Progreso  SELECT i.fecha, (select sum(ingreso) from ingresos where fecha=i.fecha AND idUsuario="'.$idUsuario.'") as ingre, (select sum(egreso) from egresos where fecha=i.fecha AND idUsuario="'.$idUsuario.'") as egre from ingresos as i where i.idUsuario="'.$idUsuario.'" group by i.fecha
     
     @IBOutlet var tabla: UITableView!
+    @IBOutlet var nombreMetaLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +33,9 @@ class ProgresoViewController: UIViewController, UITableViewDelegate, UITableView
     
     func obtenerJson() {
         
-        let urlString = "http://intercubo.com/aprendeycrece/api/obtenerProgresoPersonal.php?idUsuario=" + idUsuario
+        var nombre = ""
+        
+        let urlString = "http://intercubo.com/aprendeycrece/api/obtenerProgresoPersonal.php?idUsuario=" + String(idUsuario)
         
         let url = NSURL(string: urlString)
         
@@ -43,16 +47,29 @@ class ProgresoViewController: UIViewController, UITableViewDelegate, UITableView
                     
                     do {
                         
+                        
+                        
                         self.fechasArray.removeAll()
                         self.ingresosArray.removeAll()
                         self.egresosArray.removeAll()
                         
                         let jsonResponse = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! NSArray
                         
+                        print(jsonResponse)
+                        
                         for json in jsonResponse {
                             
                             if let fecha = json["fecha"] as? String {
                                 self.fechasArray.append(fecha)
+                            }
+                            
+                            
+                            if let meta = json["meta"] as? String {
+                                self.montoMeta = meta
+                            }
+                            
+                            if let nombreJson = json["nombre"] as? String {
+                                nombre = nombreJson
                             }
                             
                             
@@ -70,8 +87,7 @@ class ProgresoViewController: UIViewController, UITableViewDelegate, UITableView
                                 let egreso = "0"
                                 self.egresosArray.append(egreso)
                             }
-                            
-                            
+
                             
 
                         }
@@ -81,6 +97,7 @@ class ProgresoViewController: UIViewController, UITableViewDelegate, UITableView
                         print(self.egresosArray)
                         
                         dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                            self.nombreMetaLabel.text = nombre
                             self.tabla.reloadData()
                         })
                         
@@ -123,8 +140,14 @@ class ProgresoViewController: UIViewController, UITableViewDelegate, UITableView
         
         let cell = tabla.dequeueReusableCellWithIdentifier("Celda", forIndexPath: indexPath) as! ProgresoTableViewCell
         
+        let diferencia: Int = Int(ingresosArray[indexPath.row])! - Int(egresosArray[indexPath.row])!
+        
         cell.fechaLabel.text = fechasArray[indexPath.row]
-        cell.ahorroLabel.text = "Su ahorro es \(Int(ingresosArray[indexPath.row])! - Int(egresosArray[indexPath.row])!)"
+        cell.ahorroLabel.text = "Su ahorro es \(diferencia)"
+        
+        self.montoMeta = String(Int(self.montoMeta)! - diferencia)
+        
+        cell.totalAhorroLabel.text = "$ \(self.montoMeta)" + ".00"
         
         if Int(ingresosArray[indexPath.row])! < Int(egresosArray[indexPath.row])! {
             cell.palomaOCruzImagen.image = UIImage(named: "cruzCheck")

@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -212,7 +213,7 @@
                                             <constraint firstAttribute="width" constant="17" id="R3O-Hb-4Kj"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tu ahorro al " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0s-4J-cma">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="tu ahorro al " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0s-4J-cma">
                                         <rect key="frame" x="165" y="121" width="46" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="EYi-tr-0yl"/>
@@ -221,7 +222,7 @@
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="dia $" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDG-r5-TiZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" text="dia $" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDG-r5-TiZ">
                                         <rect key="frame" x="216" y="121" width="281" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="JQI-ks-2bG"/>
@@ -2497,7 +2498,7 @@
                                 <color key="textColor" red="0.088249361499999998" green="0.21245659729999999" blue="0.09971302235" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Viaje Familiar a Disney World" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voH-DI-PGu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voH-DI-PGu">
                                 <rect key="frame" x="32" y="103" width="536" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="561-Ha-GVy"/>
@@ -2556,13 +2557,13 @@
                                                     <color key="textColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Te queda por ahorrar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPg-us-cEH">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Te queda por ahorrar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPg-us-cEH">
                                                     <rect key="frame" x="466" y="11" width="80" height="11"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="8"/>
                                                     <color key="textColor" red="0.088249361499999998" green="0.21245659729999999" blue="0.09971302235" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 23.090.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fy-ML-MLM">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$ 0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fy-ML-MLM">
                                                     <rect key="frame" x="466" y="22" width="76" height="20"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.61508423571717175" blue="0.61508423571717175" alpha="1" colorSpace="calibratedRGB"/>
@@ -2573,13 +2574,14 @@
                                             <constraints>
                                                 <constraint firstItem="PTy-MY-ktF" firstAttribute="top" secondItem="Xu5-Cl-l0g" secondAttribute="bottom" id="1Kd-cb-XMH"/>
                                                 <constraint firstItem="Xu5-Cl-l0g" firstAttribute="leading" secondItem="FbH-SD-CDh" secondAttribute="trailing" constant="8" id="4gD-oC-SbI"/>
-                                                <constraint firstItem="2fy-ML-MLM" firstAttribute="top" secondItem="oPg-us-cEH" secondAttribute="bottom" id="6QN-gP-ndW"/>
-                                                <constraint firstItem="2fy-ML-MLM" firstAttribute="leading" secondItem="9Lw-rx-9Uf" secondAttribute="trailing" constant="-123" id="J9S-3m-XcC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="2fy-ML-MLM" secondAttribute="trailing" constant="50" id="B6d-gF-dgY"/>
                                                 <constraint firstItem="Xu5-Cl-l0g" firstAttribute="top" secondItem="N3T-yy-5S6" secondAttribute="topMargin" constant="3" id="Osd-dh-2eQ"/>
+                                                <constraint firstItem="2fy-ML-MLM" firstAttribute="baseline" secondItem="PTy-MY-ktF" secondAttribute="firstBaseline" id="P6t-V5-2OJ"/>
                                                 <constraint firstItem="xkZ-5a-xWH" firstAttribute="leading" secondItem="N3T-yy-5S6" secondAttribute="leadingMargin" constant="1" id="UQi-Xg-FFC"/>
                                                 <constraint firstItem="FbH-SD-CDh" firstAttribute="leading" secondItem="N3T-yy-5S6" secondAttribute="leadingMargin" constant="9" id="VMc-rT-HKZ"/>
                                                 <constraint firstItem="9Lw-rx-9Uf" firstAttribute="top" secondItem="N3T-yy-5S6" secondAttribute="topMargin" constant="-4" id="YvM-5J-ydc"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="9Lw-rx-9Uf" secondAttribute="trailing" constant="3" id="ZV0-H6-su3"/>
+                                                <constraint firstItem="2fy-ML-MLM" firstAttribute="leading" secondItem="oPg-us-cEH" secondAttribute="leading" id="aXy-5n-Lij"/>
                                                 <constraint firstItem="xkZ-5a-xWH" firstAttribute="top" secondItem="N3T-yy-5S6" secondAttribute="topMargin" constant="-4" id="c15-Lf-eSR"/>
                                                 <constraint firstItem="9Lw-rx-9Uf" firstAttribute="leading" secondItem="xkZ-5a-xWH" secondAttribute="trailing" id="ctV-8O-gor"/>
                                                 <constraint firstItem="9Lw-rx-9Uf" firstAttribute="width" secondItem="xkZ-5a-xWH" secondAttribute="height" multiplier="129:46" id="i7O-2O-yTO"/>
@@ -2626,12 +2628,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nombreMetaLabel" destination="voH-DI-PGu" id="Q46-NC-mcF"/>
                         <outlet property="tabla" destination="g6f-iQ-R3d" id="rX7-1K-WvC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xlq-3S-TGP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2514" y="2089"/>
+            <point key="canvasLocation" x="2538" y="2089"/>
         </scene>
         <!--Acerca de la aplicación-->
         <scene sceneID="3Gx-25-beG">
