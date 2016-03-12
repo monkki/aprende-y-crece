@@ -35,6 +35,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     // ENLACE PARA LOGIN http://intercubo.com/aprendeycrece/api/login.php?c=rgutierrezgonzalez@hotmail.com&p=swamphell
     
     
+    // ENLACE PARA LOGIN Google http://intercubo.com/aprendeycrece/api/loginRedes.php?c=robertogutierrezgonzalez1982@gmail.com&Gid=115277863506593734852
+    
+    // ENLACE PARA LOGIN CON Facebook http://intercubo.com/aprendeycrece/api/loginRedes.php?c=monkki@hotmail.com&fbid=10153929699184948
+    
+    
     
     // BOTONES DE LOGIN
     @IBOutlet var botonLoginFacebook: FBSDKLoginButton!
@@ -285,6 +290,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     }
 
     
+
     
     // METODOS DE FACEBOOK
     // Facebook Delegate Methods
@@ -492,18 +498,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
             print("Nombre " + name)
             print("email " + email)
             
-            let fullName = name
-            let fullNameArr = fullName.characters.split{$0 == " "}.map(String.init)
-            
-            let nombre = fullNameArr[0]
-            let apellido = fullNameArr[1]
-            
-            NSUserDefaults.standardUserDefaults().setObject(nombre, forKey: "nombre")
-            NSUserDefaults.standardUserDefaults().setObject(apellido, forKey: "apellido")
-            NSUserDefaults.standardUserDefaults().setObject(email, forKey: "correo")
-            NSUserDefaults.standardUserDefaults().synchronize()
-            
-            performSegueWithIdentifier("inicioSegue", sender: self)
+            loginConGoogle(email, googleId: userId)
             
             
         }
@@ -649,7 +644,126 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         }
     }
 
+  
+    // FUNCION PARA LOGEAR USUARIO CON Google
     
+    func loginConGoogle(correo: String, googleId: String) {
+        
+        let urlString = "http://intercubo.com/aprendeycrece/api/loginRedes.php?c=" + correo + "&Gid=" + googleId
+        
+        let url = NSURL(string: urlString)
+        
+        if let url = url {
+            
+            let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
+                
+                if error != nil {
+                    
+                    print(error?.localizedDescription)
+                    
+                }
+                
+                if let data = data {
+                    
+                    do {
+                        
+                        if let errorResult = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary {
+                            
+                            let error = errorResult["error"] as! String
+                            
+                            print(error)
+                            
+                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                // Iniciar Loader
+                                JHProgressHUD.sharedHUD.hide()
+                                self.mostraMSJ("Correo o contraseña incorrectos")
+                                
+                            })
+                            
+                            
+                            
+                        } else {
+                            
+                            let jsonResult = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! NSArray
+                            
+                            print(jsonResult)
+                            
+                            for json in jsonResult {
+                                
+                                let correo = json["correo"] as! String
+                                if let Gid = json["Gid"] as? Int {
+                                    print(Gid)
+                                    NSUserDefaults.standardUserDefaults().setObject(Gid, forKey: "Gid")
+                                }
+                                let idUsuario = json["id"] as! Int
+                                let nombreCompleto = json["nombre"] as! String
+                                let token = json["token"] as! NSString
+                                
+                                let fullName = nombreCompleto
+                                let fullNameArr = fullName.characters.split{$0 == " "}.map(String.init)
+                                
+                                let nombre = fullNameArr[0]
+                                let apellido = fullNameArr[1]
+                                
+                                
+                                print(correo)
+                                print(String(idUsuario))
+                                print(nombre)
+                                print(token)
+                                
+                                NSUserDefaults.standardUserDefaults().setObject(token, forKey: "tokenServer")
+                                NSUserDefaults.standardUserDefaults().setObject(idUsuario, forKey: "idUsuario")
+                                NSUserDefaults.standardUserDefaults().setObject(nombre, forKey: "nombre")
+                                NSUserDefaults.standardUserDefaults().setObject(apellido, forKey: "apellido")
+                                NSUserDefaults.standardUserDefaults().setObject(correo, forKey: "correo")
+                                NSUserDefaults.standardUserDefaults().synchronize()
+                                
+                            }
+                            
+                            
+                            
+                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                // Iniciar Loader
+                                JHProgressHUD.sharedHUD.hide()
+                                self.performSegueWithIdentifier("inicioSegue", sender: self)
+                                
+                            })
+                            
+                            
+                        }
+                        
+                    } catch {
+                        
+                    }
+                    
+                    
+                } else {
+                    
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        // Iniciar Loader
+                        JHProgressHUD.sharedHUD.hide()
+                    })
+                    print("Hubo un problema con la URL")
+                    
+                }
+                
+            })
+            task.resume()
+            
+            
+        } else {
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                // Iniciar Loader
+                JHProgressHUD.sharedHUD.hide()
+            })
+            print("Hubo un problema con la URL")
+            
+        }
+        
+        
+    }
+
     
     
 
