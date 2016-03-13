@@ -77,6 +77,30 @@ class MiCarteraViewController: UIViewController {
         self.miPresupuestoEstimadoGauge.rate = CGFloat(numero)
     }
 
+    // ACCION DEL SEGMENTED CONTROLLER
+    
+    @IBAction func indexCambio(sender: AnyObject) {
+        
+        switch reporteSegmentedControl.selectedSegmentIndex {
+            
+        case 0:
+            print("Index 0")
+            obtenerIngresos()
+        case 1:
+            print("Index 1")
+            obtenerIngresos()
+        case 2:
+            print("Index 2")
+            obtenerIngresos()
+        case 3:
+            print("Index 3")
+            obtenerIngresos()
+        default:
+            print("Hubo un problema con el index")
+        }
+    }
+    
+    
     
     //FUNCION PARA OBTENER INGRESOS
     
