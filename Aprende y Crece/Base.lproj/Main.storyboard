@@ -3954,7 +3954,7 @@
         <!--Comparte la App-->
         <scene sceneID="eV1-vJ-aKn">
             <objects>
-                <viewController title="Comparte la App" id="kse-sm-1Mj" sceneMemberID="viewController">
+                <viewController title="Comparte la App" id="kse-sm-1Mj" customClass="ComparteAppViewController" customModule="Aprende_y_Crece" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YSL-iL-Kzn"/>
                         <viewControllerLayoutGuide type="bottom" id="v8g-zJ-fMI"/>
@@ -3989,6 +3989,9 @@
                                     <constraint firstAttribute="height" constant="75" id="xMb-8D-CLg"/>
                                 </constraints>
                                 <state key="normal" image="whatsappIcono"/>
+                                <connections>
+                                    <action selector="compartirEnWhatsapp:" destination="kse-sm-1Mj" eventType="touchUpInside" id="E31-yv-RX7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfb-ck-bp2">
                                 <rect key="frame" x="214" y="409" width="60" height="75"/>
@@ -3997,6 +4000,9 @@
                                     <constraint firstAttribute="width" constant="60" id="Y5V-4U-eVH"/>
                                 </constraints>
                                 <state key="normal" image="googleIcono"/>
+                                <connections>
+                                    <action selector="compartirEnGoogle:" destination="kse-sm-1Mj" eventType="touchUpInside" id="rYu-IE-O2q"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ah-u6-gPY">
                                 <rect key="frame" x="270" y="309" width="60" height="75"/>
@@ -4005,6 +4011,9 @@
                                     <constraint firstAttribute="height" constant="75" id="kLY-aJ-gXH"/>
                                 </constraints>
                                 <state key="normal" image="facebookIcono"/>
+                                <connections>
+                                    <action selector="compartirEnFacebook:" destination="kse-sm-1Mj" eventType="touchUpInside" id="BJw-a3-Qnd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cp-YU-6eo">
                                 <rect key="frame" x="481" y="309" width="60" height="75"/>
@@ -4013,6 +4022,9 @@
                                     <constraint firstAttribute="height" constant="75" id="tGV-FP-uYw"/>
                                 </constraints>
                                 <state key="normal" image="twitterIcono"/>
+                                <connections>
+                                    <action selector="compartirEnTwitter:" destination="kse-sm-1Mj" eventType="touchUpInside" id="4an-w9-bAs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJI-pj-BOf">
                                 <rect key="frame" x="322" y="409" width="60" height="75"/>
@@ -4021,6 +4033,9 @@
                                     <constraint firstAttribute="width" constant="60" id="Jri-Ab-pf1"/>
                                 </constraints>
                                 <state key="normal" image="correoIcono"/>
+                                <connections>
+                                    <action selector="compartirEnEmail:" destination="kse-sm-1Mj" eventType="touchUpInside" id="Qky-fl-kQv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

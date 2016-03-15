@@ -17,6 +17,7 @@
 		5C227C971C6955F40000B6CD /* UICountingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C227C961C6955F40000B6CD /* UICountingLabel.swift */; };
 		5C227C991C6956CB0000B6CD /* MiCarteraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C227C981C6956CB0000B6CD /* MiCarteraViewController.swift */; };
 		5C265F571C8632C700A5C0F8 /* ProgresoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C265F561C8632C700A5C0F8 /* ProgresoTableViewCell.swift */; };
+		5C2E33481C98961A00713C48 /* ComparteAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E33471C98961A00713C48 /* ComparteAppViewController.swift */; };
 		5C35F1FA1C87E2C20030B988 /* AjustesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35F1F91C87E2C20030B988 /* AjustesTableViewController.swift */; };
 		5C4C89301C91FD8600BBFA6D /* ContrasenaGoogleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C892F1C91FD8600BBFA6D /* ContrasenaGoogleViewController.swift */; };
 		5C5505661C7660A7000B6AB2 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5505621C7660A7000B6AB2 /* FBSDKCoreKit.framework */; };
@@ -86,6 +87,7 @@
 		5C227C961C6955F40000B6CD /* UICountingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICountingLabel.swift; sourceTree = "<group>"; };
 		5C227C981C6956CB0000B6CD /* MiCarteraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiCarteraViewController.swift; sourceTree = "<group>"; };
 		5C265F561C8632C700A5C0F8 /* ProgresoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgresoTableViewCell.swift; sourceTree = "<group>"; };
+		5C2E33471C98961A00713C48 /* ComparteAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparteAppViewController.swift; sourceTree = "<group>"; };
 		5C35F1F91C87E2C20030B988 /* AjustesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AjustesTableViewController.swift; sourceTree = "<group>"; };
 		5C4C892F1C91FD8600BBFA6D /* ContrasenaGoogleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContrasenaGoogleViewController.swift; sourceTree = "<group>"; };
 		5C5505621C7660A7000B6AB2 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				5C72CC751C754384008B4F87 /* PageContentViewController.swift */,
 				5C72CC761C754384008B4F87 /* PageViewController.swift */,
 				5C35F1F91C87E2C20030B988 /* AjustesTableViewController.swift */,
+				5C2E33471C98961A00713C48 /* ComparteAppViewController.swift */,
 				5CFFBB351C651F7200A33148 /* LaunchScreen.storyboard */,
 				5CFFBB381C651F7200A33148 /* Info.plist */,
 				5C5505701C7669D4000B6AB2 /* GoogleService-Info.plist */,
@@ -497,6 +500,7 @@
 				5CA2F3681C73CB82000D34DE /* IQBarButtonItem.swift in Sources */,
 				5CA2F3621C73CB82000D34DE /* IQUIView+Hierarchy.swift in Sources */,
 				5CF509381C6E848400D837A2 /* FSCalendarCell.m in Sources */,
+				5C2E33481C98961A00713C48 /* ComparteAppViewController.swift in Sources */,
 				5C1207451C89C9330050DBDA /* MetaInicialViewController.swift in Sources */,
 				5CA2F3641C73CB82000D34DE /* IQUIWindow+Hierarchy.swift in Sources */,
 				5C227C991C6956CB0000B6CD /* MiCarteraViewController.swift in Sources */,
