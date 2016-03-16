@@ -43,7 +43,7 @@ class ComparteAppViewController: UIViewController, MFMailComposeViewControllerDe
             self.presentViewController(fbShare, animated: true, completion: nil)
             
         } else {
-            var alert = UIAlertController(title: "Aprende y crece", message: "Porfavor haga login en facebook en su celular", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Aprende y crece", message: "Porfavor haga login en facebook en su celular", preferredStyle: UIAlertControllerStyle.Alert)
             
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
@@ -57,7 +57,7 @@ class ComparteAppViewController: UIViewController, MFMailComposeViewControllerDe
         
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
             
-            var tweetShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            let tweetShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             let url = NSURL(string: "http://www.aprendeycrece.com")
             tweetShare.addURL(url)
             tweetShare.setInitialText("Aprende y Crece App")
@@ -66,7 +66,7 @@ class ComparteAppViewController: UIViewController, MFMailComposeViewControllerDe
             
         } else {
             
-            var alert = UIAlertController(title: "Aprende y crece", message: "Porfavor haga login en Twitter en su celular", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Aprende y crece", message: "Porfavor haga login en Twitter en su celular", preferredStyle: UIAlertControllerStyle.Alert)
             
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             
