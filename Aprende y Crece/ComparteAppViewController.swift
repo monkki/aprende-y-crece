@@ -31,12 +31,16 @@ class ComparteAppViewController: UIViewController, MFMailComposeViewControllerDe
         let urlStringEncoded = urlString.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
         let url  = NSURL(string: "whatsapp://send?text=\(urlStringEncoded!)")
         
+        if UIApplication.sharedApplication().canOpenURL(url!) {
+            UIApplication.sharedApplication().openURL(url!)
+        }
+        
     }
     
     @IBAction func compartirEnFacebook(sender: AnyObject) {
         
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
-            var fbShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            let fbShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
             let url = NSURL(string: "http://www.aprendeycrece.com")
             fbShare.addURL(url)
             

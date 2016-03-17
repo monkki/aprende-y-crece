@@ -52,6 +52,7 @@
 	<string>Aprende y Crece</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>whatsapp</string>
 		<string>fbauth2</string>
 		<string>googlechromes</string>
 		<string>comgooglemaps</string>
