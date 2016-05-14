@@ -1842,7 +1842,7 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     if textField.respondsToSelector(Selector("setInputAccessoryView:")) && (textField.inputAccessoryView == nil || textField.inputAccessoryView?.tag == IQKeyboardManager.kIQDoneButtonToolbarTag) {
                         
                         //Now adding textField placeholder text as title of IQToolbar  (Enhancement ID: #27)
-                        textField.addPreviousNextDoneOnKeyboardWithTarget(self, previousAction: "previousAction:", nextAction: "nextAction:", doneAction: "doneAction:", shouldShowPlaceholder: shouldShowTextFieldPlaceholder)
+                        textField.addPreviousNextDoneOnKeyboardWithTarget(self, previousAction: #selector(IQKeyboardManager.previousAction(_:)), nextAction: "nextAction:", doneAction: "doneAction:", shouldShowPlaceholder: shouldShowTextFieldPlaceholder)
                         textField.inputAccessoryView?.tag = IQKeyboardManager.kIQPreviousNextButtonToolbarTag //  (Bug ID: #78)
                    }
                     

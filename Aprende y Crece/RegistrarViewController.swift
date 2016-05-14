@@ -484,13 +484,19 @@ class RegistrarViewController: UIViewController, UITextFieldDelegate, FBSDKLogin
                                 let fullNameArr = fullName.characters.split{$0 == " "}.map(String.init)
                                 
                                 let nombre = fullNameArr[0]
-                                let apellido = fullNameArr[1]
+                                
+                                if fullNameArr.count > 1 {
+                                    
+                                    let apellido = fullNameArr[1]
+                                    NSUserDefaults.standardUserDefaults().setObject(apellido, forKey: "apellido")
+                                }
+                                
                                 
                                 NSUserDefaults.standardUserDefaults().setObject(token, forKey: "tokenServer")
                                 NSUserDefaults.standardUserDefaults().setObject(fbid, forKey: "fbid")
                                 NSUserDefaults.standardUserDefaults().setObject(idUsuario, forKey: "idUsuario")
                                 NSUserDefaults.standardUserDefaults().setObject(nombre, forKey: "nombre")
-                                NSUserDefaults.standardUserDefaults().setObject(apellido, forKey: "apellido")
+                                
                                 NSUserDefaults.standardUserDefaults().setObject(correo, forKey: "correo")
                                 NSUserDefaults.standardUserDefaults().synchronize()
                                 
@@ -568,133 +574,6 @@ class RegistrarViewController: UIViewController, UITextFieldDelegate, FBSDKLogin
         
         
     }
-
-    
-//    // REGISTRAR CON FACEBOOK
-//    
-//    func registrarConFacebook(var nombreCompleto: String, var idFacebook: String, var emailFacebookM: String, var contraseña: String) {
-//        
-//        // Iniciar Loader
-//        JHProgressHUD.sharedHUD.showInView(self.view, withHeader: "Registrando usuario", andFooter: "Por favor espere...")
-//        
-//        
-//        let customAllowedSet = NSCharacterSet.URLQueryAllowedCharacterSet()
-//        
-//        nombreCompleto = nombreCompleto.stringByAddingPercentEncodingWithAllowedCharacters(customAllowedSet)!
-//        idFacebook = idFacebook.stringByAddingPercentEncodingWithAllowedCharacters(customAllowedSet)!
-//        emailFacebookM = emailFacebookM.stringByAddingPercentEncodingWithAllowedCharacters(customAllowedSet)!
-//        contraseña = contraseña.stringByAddingPercentEncodingWithAllowedCharacters(customAllowedSet)!
-//        
-//        let urlString = "http://intercubo.com/aprendeycrece/api/registra.php?n=" + nombreCompleto + "&c=" + emailFacebookM + "&fbid=" + idFacebook + "&p=" + contraseña
-//        
-//        let url = NSURL(string: urlString)
-//        
-//        if let url = url {
-//            
-//            let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
-//                
-//                if error != nil {
-//                    
-//                    print(error?.localizedDescription)
-//                    
-//                }
-//                
-//                if let data = data {
-//                    
-//                    do {
-//                        
-//                        
-//                        if let errorResult = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary {
-//                            
-//                            let error = errorResult["error"] as! String
-//                            
-//                            print(error)
-//                            
-//                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-//                                // Iniciar Loader
-//                                JHProgressHUD.sharedHUD.hide()
-//                                let loginManager = FBSDKLoginManager()
-//                                loginManager.logOut()
-//                                
-//                                let alerta = UIAlertController(title: "Adventure Hike", message: "Ya existe una cuenta registrada con ese correo", preferredStyle: UIAlertControllerStyle.Alert)
-//                                alerta.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
-//                                    
-//                                    self.performSegueWithIdentifier("inicioALogin", sender: self)
-//                                    
-//                                }))
-//                                
-//                                self.presentViewController(alerta, animated: true, completion: nil)
-//                                
-//                                //self.mostraMSJ("Ya existe una cuenta registrada con ese correo")
-//                                
-//                            })
-//                            
-//                            
-//                            
-//                        } else {
-//                            
-//                            let jsonResult = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! NSArray
-//                            
-//                            //print(jsonResult)
-//                            
-//                            for json in jsonResult {
-//                                
-//                                let correo = json["correo"] as! String
-//                                let display = json["display"] as! String
-//                                let fbid = json["fbid"] as! Int
-//                                let fechaNac = json["fecha_nac"] as! String
-//                                let idUsuario = json["id"] as! Int
-//                                let nickname = json["nickname"] as! String
-//                                let nombre = json["nombre"] as! String
-//                                let token = json["token"] as! NSString
-//                                
-//                                print(correo)
-//                                print(display)
-//                                print(fbid)
-//                                print(fechaNac)
-//                                print(String(idUsuario))
-//                                print(nickname)
-//                                print(nombre)
-//                                print(token)
-//                                
-//                                NSUserDefaults.standardUserDefaults().setObject(token, forKey: "tokenServer")
-//                                NSUserDefaults.standardUserDefaults().setObject(fbid, forKey: "fbid")
-//                                NSUserDefaults.standardUserDefaults().setObject(idUsuario, forKey: "idUsuario")
-//                                NSUserDefaults.standardUserDefaults().setObject(nombre, forKey: "nombre")
-//                                NSUserDefaults.standardUserDefaults().synchronize()
-//                                
-//                            }
-//                            
-//                            
-//                            
-//                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-//                                // Iniciar Loader
-//                                JHProgressHUD.sharedHUD.hide()
-//                                self.performSegueWithIdentifier("inicio", sender: self)
-//                                
-//                            })
-//                            
-//                            
-//                        }
-//                        
-//                        
-//                    } catch {
-//                        
-//                        
-//                    }
-//                    
-//                    
-//                    
-//                }
-//            })
-//            
-//            task.resume()
-//            
-//        }
-//    }
-//    
-
-
 
 
 }
