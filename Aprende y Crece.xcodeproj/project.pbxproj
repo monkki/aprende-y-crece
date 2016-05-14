@@ -21,15 +21,12 @@
 		5C35F1FA1C87E2C20030B988 /* AjustesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35F1F91C87E2C20030B988 /* AjustesTableViewController.swift */; };
 		5C4C89301C91FD8600BBFA6D /* ContrasenaGoogleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C892F1C91FD8600BBFA6D /* ContrasenaGoogleViewController.swift */; };
 		5C5505661C7660A7000B6AB2 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5505621C7660A7000B6AB2 /* FBSDKCoreKit.framework */; };
-		5C5505671C7660A7000B6AB2 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5505631C7660A7000B6AB2 /* FBSDKLoginKit.framework */; };
-		5C55056D1C7666F0000B6AB2 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C55056B1C7666F0000B6AB2 /* GoogleSignIn.framework */; };
 		5C5505711C7669D4000B6AB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C5505701C7669D4000B6AB2 /* GoogleService-Info.plist */; };
 		5C5505731C766AB9000B6AB2 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5505721C766AB9000B6AB2 /* AddressBook.framework */; };
 		5C5505751C766ABE000B6AB2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5505741C766ABE000B6AB2 /* StoreKit.framework */; };
 		5C5505771C766AC7000B6AB2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5505761C766AC7000B6AB2 /* SystemConfiguration.framework */; };
 		5C5505791C766BD7000B6AB2 /* libz.1.1.3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5505781C766BD7000B6AB2 /* libz.1.1.3.tbd */; };
 		5C55D1B21C99EE9700732404 /* ReportaErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C55D1B11C99EE9700732404 /* ReportaErrorViewController.swift */; };
-		5C55D1B81C9A5AF000732404 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C55D1B31C9A5AF000732404 /* FBSDKCoreKit.framework */; };
 		5C55D1B91C9A5AF000732404 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C55D1B41C9A5AF000732404 /* FBSDKLoginKit.framework */; };
 		5C55D1BA1C9A5AF000732404 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5C55D1B51C9A5AF000732404 /* GoogleSignIn.bundle */; };
 		5C55D1BB1C9A5AF000732404 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C55D1B61C9A5AF000732404 /* GoogleSignIn.framework */; };
@@ -189,9 +186,6 @@
 				5C5505731C766AB9000B6AB2 /* AddressBook.framework in Frameworks */,
 				FD69606D38D736866258BF57 /* Pods_Aprende_y_Crece.framework in Frameworks */,
 				5C5505661C7660A7000B6AB2 /* FBSDKCoreKit.framework in Frameworks */,
-				5C5505671C7660A7000B6AB2 /* FBSDKLoginKit.framework in Frameworks */,
-				5C55D1B81C9A5AF000732404 /* FBSDKCoreKit.framework in Frameworks */,
-				5C55056D1C7666F0000B6AB2 /* GoogleSignIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,7 +377,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Roberto Gutierrez";
 				TargetAttributes = {
 					5CFFBB281C651F7100A33148 = {

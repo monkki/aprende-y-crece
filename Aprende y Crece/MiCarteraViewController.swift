@@ -188,7 +188,7 @@ class MiCarteraViewController: UIViewController {
                             
                             // Se obtiene el index de Arreglo donde haya Comida y se suman
                             var sumaDeComida = 0
-                            for var i = 0; i < self.motivoArrayIngresos.count; i++ {
+                            for i in 0 ..< self.motivoArrayIngresos.count {
                                 let comidas = "Comida"
                                 
                                 if comidas == self.motivoArrayIngresos[i] {
@@ -205,7 +205,7 @@ class MiCarteraViewController: UIViewController {
                             
                             // Se obtiene el index de Arreglo donde haya Casa y se suman
                             var sumaDeCasa = 0
-                            for var i = 0; i < self.motivoArrayIngresos.count; i++ {
+                            for i in 0 ..< self.motivoArrayIngresos.count {
                                 let casa = "Casa"
                                 
                                 if casa == self.motivoArrayIngresos[i] {
@@ -221,7 +221,7 @@ class MiCarteraViewController: UIViewController {
                             
                             // Se obtiene el index de Arreglo donde haya Compras y se suman
                             var sumaDeCompras = 0
-                            for var i = 0; i < self.motivoArrayIngresos.count; i++ {
+                            for i in 0 ..< self.motivoArrayIngresos.count {
                                 let compras = "Compras"
                                 
                                 if compras == self.motivoArrayIngresos[i] {
@@ -237,7 +237,7 @@ class MiCarteraViewController: UIViewController {
                             
                             // Se obtiene el index de Arreglo donde haya Compras y se suman
                             var sumaDeOtros = 0
-                            for var i = 0; i < self.motivoArrayIngresos.count; i++ {
+                            for i in 0 ..< self.motivoArrayIngresos.count {
                                 let otros = "Otro"
                                 
                                 if otros == self.motivoArrayIngresos[i] {
@@ -377,7 +377,7 @@ class MiCarteraViewController: UIViewController {
                             
                             // Se obtiene el index de Arreglo donde haya Comida y se suman
                             var sumaDeComida = 0
-                            for var i = 0; i < self.motivoArrayEgresos.count; i++ {
+                            for i in 0 ..< self.motivoArrayEgresos.count {
                                 let comidas = "Comida"
                                 
                                 if comidas == self.motivoArrayEgresos[i] {
@@ -395,7 +395,7 @@ class MiCarteraViewController: UIViewController {
                             
                             // Se obtiene el index de Arreglo donde haya Casa y se suman
                             var sumaDeCasa = 0
-                            for var i = 0; i < self.motivoArrayEgresos.count; i++ {
+                            for i in 0 ..< self.motivoArrayEgresos.count {
                                 let casa = "Casa"
                                 
                                 if casa == self.motivoArrayEgresos[i] {
@@ -413,7 +413,7 @@ class MiCarteraViewController: UIViewController {
                             
                             // Se obtiene el index de Arreglo donde haya Compras y se suman
                             var sumaDeCompras = 0
-                            for var i = 0; i < self.motivoArrayEgresos.count; i++ {
+                            for i in 0 ..< self.motivoArrayEgresos.count {
                                 let compras = "Compras"
                                 
                                 if compras == self.motivoArrayEgresos[i] {
@@ -431,7 +431,7 @@ class MiCarteraViewController: UIViewController {
                             
                             // Se obtiene el index de Arreglo donde haya Compras y se suman
                             var sumaDeOtros = 0
-                            for var i = 0; i < self.motivoArrayEgresos.count; i++ {
+                            for i in 0 ..< self.motivoArrayEgresos.count {
                                 let otros = "Otro"
                                 
                                 if otros == self.motivoArrayEgresos[i] {

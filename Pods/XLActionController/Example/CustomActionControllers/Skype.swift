@@ -253,7 +253,7 @@ public class SkypeActionController: ActionController<SkypeCell, String, UICollec
             
             let context = UIGraphicsGetCurrentContext()
             CGContextAddPath(context, path.CGPath)
-            UIColor(colorLiteralRed: 18/255.0, green: 165/255.0, blue: 244/255.0, alpha: 1.0).set()
+            UIColor(colorLiteralRed: 0.082, green: 0.388, blue: 0.255, alpha: 0.9).set()
             CGContextFillPath(context)
         }
     }

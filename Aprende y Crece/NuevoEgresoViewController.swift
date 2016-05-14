@@ -43,7 +43,7 @@ class NuevoEgresoViewController: UIViewController, UITextFieldDelegate, UITextVi
         descripcionTextview.textColor = UIColor.lightGrayColor()
 
         // TEXTFIELD
-        motivoTextfield.addTarget(self, action: "motivoTextfieldAccion:", forControlEvents: UIControlEvents.TouchDown)
+        motivoTextfield.addTarget(self, action: #selector(NuevoEgresoViewController.motivoTextfieldAccion(_:)), forControlEvents: UIControlEvents.TouchDown)
         
         var shortDate: String {
             let dateFormatter = NSDateFormatter()

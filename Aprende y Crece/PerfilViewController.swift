@@ -133,7 +133,7 @@ class PerfilViewController: UIViewController, UITextFieldDelegate, UITextViewDel
             
         }
 
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PerfilViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
     }

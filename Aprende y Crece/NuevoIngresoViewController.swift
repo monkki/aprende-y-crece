@@ -43,7 +43,7 @@ class NuevoIngresoViewController: UIViewController, UITextFieldDelegate, UITextV
         descripcionTextview.textColor = UIColor.lightGrayColor()
 
         // TEXTFIELD
-        motivoTextfield.addTarget(self, action: "motivoTextfieldAccion:", forControlEvents: UIControlEvents.TouchDown)
+        motivoTextfield.addTarget(self, action: #selector(NuevoIngresoViewController.motivoTextfieldAccion(_:)), forControlEvents: UIControlEvents.TouchDown)
         
         var shortDate: String {
             let dateFormatter = NSDateFormatter()

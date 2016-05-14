@@ -637,24 +637,24 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         super.init()
 
         //  Registering for keyboard notification.
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:",                name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:",                name: UIKeyboardWillHideNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardDidHide:",                name: UIKeyboardDidHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(IQKeyboardManager.keyboardWillShow(_:)),                name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(IQKeyboardManager.keyboardWillHide(_:)),                name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(IQKeyboardManager.keyboardDidHide(_:)),                name: UIKeyboardDidHideNotification, object: nil)
         
         //  Registering for textField notification.
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "textFieldViewDidBeginEditing:",    name: UITextFieldTextDidBeginEditingNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "textFieldViewDidEndEditing:",      name: UITextFieldTextDidEndEditingNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(IQKeyboardManager.textFieldViewDidBeginEditing(_:)),    name: UITextFieldTextDidBeginEditingNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(IQKeyboardManager.textFieldViewDidEndEditing(_:)),      name: UITextFieldTextDidEndEditingNotification, object: nil)
         
         //  Registering for textView notification.
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "textFieldViewDidBeginEditing:",    name: UITextViewTextDidBeginEditingNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "textFieldViewDidEndEditing:",      name: UITextViewTextDidEndEditingNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "textFieldViewDidChange:",          name: UITextViewTextDidChangeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(IQKeyboardManager.textFieldViewDidBeginEditing(_:)),    name: UITextViewTextDidBeginEditingNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(IQKeyboardManager.textFieldViewDidEndEditing(_:)),      name: UITextViewTextDidEndEditingNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(IQKeyboardManager.textFieldViewDidChange(_:)),          name: UITextViewTextDidChangeNotification, object: nil)
         
         //  Registering for orientation changes notification
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "willChangeStatusBarOrientation:",          name: UIApplicationWillChangeStatusBarOrientationNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(IQKeyboardManager.willChangeStatusBarOrientation(_:)),          name: UIApplicationWillChangeStatusBarOrientationNotification, object: nil)
 
         //Creating gesture for @shouldResignOnTouchOutside. (Enhancement ID: #14)
-        _tapGesture = UITapGestureRecognizer(target: self, action: "tapRecognized:")
+        _tapGesture = UITapGestureRecognizer(target: self, action: #selector(IQKeyboardManager.tapRecognized(_:)))
         _tapGesture.delegate = self
         _tapGesture.enabled = shouldResignOnTouchOutside
         
@@ -712,7 +712,7 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     ///-----------------------
     
     /*  Helper function to manipulate RootViewController's frame with animation. */
-    private func setRootViewFrame(var frame: CGRect) {
+    private func setRootViewFrame( frame: CGRect) {
         
         //  Getting topMost ViewController.
         var controller = _textFieldView?.topMostController()
@@ -722,10 +722,6 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         }
         
         if let unwrappedController = controller {
-            //frame size needs to be adjusted on iOS8 due to orientation structure changes.
-            if #available(iOS 8.0, *) {
-                frame.size = unwrappedController.view.frame.size
-            }
             
             //Used UIViewAnimationOptionBeginFromCurrentState to minimize strange animations.
             UIView.animateWithDuration(_animationDuration, delay: 0, options: UIViewAnimationOptions.BeginFromCurrentState.union(_animationCurve), animations: { () -> Void in
@@ -758,7 +754,7 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         
         let textFieldView = _textFieldView!
 
-        _IQShowLog("****** \(__FUNCTION__) %@ started ******")
+        _IQShowLog("****** \(#function) %@ started ******")
 
         //  Boolean to know keyboard is showing/hiding
         _keyboardManagerFlags.isKeyboardShowing = true
@@ -786,11 +782,9 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         //If it's iOS8 then we should do calculations according to portrait orientations.   //  (Bug ID: #64, #66)
         let interfaceOrientation : UIInterfaceOrientation
         
-        if #available(iOS 8.0, *) {
-            interfaceOrientation = UIInterfaceOrientation.Portrait
-        } else {
-            interfaceOrientation = rootController.interfaceOrientation
-        }
+        
+        interfaceOrientation = rootController.interfaceOrientation
+        
 
         //  Getting RootViewRect.
         var rootViewRect = rootController.view.frame
@@ -1233,7 +1227,7 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             }
         }
 
-        _IQShowLog("****** \(__FUNCTION__) ended ******")
+        _IQShowLog("****** \(#function) ended ******")
     }
     
     ///-------------------------------
@@ -1249,7 +1243,7 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             return
         }
         
-        _IQShowLog("****** \(__FUNCTION__) started ******")
+        _IQShowLog("****** \(#function) started ******")
 
         //Due to orientation callback we need to resave it's original frame.    //  (Bug ID: #46)
         //Added _isTextFieldViewFrameChanged check. Saving textFieldView current frame to use it with canAdjustTextView if textViewFrame has already not been changed. (Bug ID: #92)
@@ -1346,7 +1340,7 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             }
         }
         
-        _IQShowLog("****** \(__FUNCTION__) ended ******")
+        _IQShowLog("****** \(#function) ended ******")
     }
     
     /*  UIKeyboardWillHideNotification. So setting rootViewController to it's default frame. */
@@ -1362,7 +1356,7 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             return
         }
         
-        _IQShowLog("****** \(__FUNCTION__) started ******")
+        _IQShowLog("****** \(#function) started ******")
 
         //Commented due to #56. Added all the conditions below to handle UIWebView's textFields.    (Bug ID: #56)
         //  We are unable to get textField object while keyboard showing on UIWebView's textField.  (Bug ID: #11)
@@ -1421,11 +1415,6 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             
             if let rootViewController = _rootViewController {
                 
-                //frame size needs to be adjusted on iOS8 due to orientation API changes.
-                if #available(iOS 8.0, *) {
-                    _topViewBeginRect.size = rootViewController.view.frame.size
-                }
-                
                 //Used UIViewAnimationOptionBeginFromCurrentState to minimize strange animations.
                 UIView.animateWithDuration(_animationDuration, delay: 0, options: UIViewAnimationOptions.BeginFromCurrentState.union(_animationCurve), animations: { () -> Void in
                     
@@ -1483,16 +1472,16 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         _startingContentOffset = CGPointZero
         //    topViewBeginRect = CGRectZero    //Commented due to #82
 
-        _IQShowLog("****** \(__FUNCTION__) ended ******")
+        _IQShowLog("****** \(#function) ended ******")
     }
 
     internal func keyboardDidHide(notification:NSNotification) {
 
-        _IQShowLog("****** \(__FUNCTION__) started ******")
+        _IQShowLog("****** \(#function) started ******")
         
         _topViewBeginRect = CGRectZero
 
-        _IQShowLog("****** \(__FUNCTION__) ended ******")
+        _IQShowLog("****** \(#function) ended ******")
     }
     
     ///-------------------------------------------
@@ -1502,7 +1491,7 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /**  UITextFieldTextDidBeginEditingNotification, UITextViewTextDidBeginEditingNotification. Fetching UITextFieldView object. */
     internal func textFieldViewDidBeginEditing(notification:NSNotification) {
 
-        _IQShowLog("****** \(__FUNCTION__) started ******")
+        _IQShowLog("****** \(#function) started ******")
 
         //  Getting object
         _textFieldView = notification.object as? UIView
@@ -1569,7 +1558,7 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         }
 
         if enable == false {
-            _IQShowLog("****** \(__FUNCTION__) ended ******")
+            _IQShowLog("****** \(#function) ended ******")
             return
         }
         
@@ -1623,13 +1612,13 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             }
         }
 
-        _IQShowLog("****** \(__FUNCTION__) ended ******")
+        _IQShowLog("****** \(#function) ended ******")
     }
     
     /**  UITextFieldTextDidEndEditingNotification, UITextViewTextDidEndEditingNotification. Removing fetched object. */
     internal func textFieldViewDidEndEditing(notification:NSNotification) {
         
-        _IQShowLog("****** \(__FUNCTION__) started ******")
+        _IQShowLog("****** \(#function) started ******")
 
         //Removing gesture recognizer   (Enhancement ID: #14)
         _textFieldView?.window?.removeGestureRecognizer(_tapGesture)
@@ -1648,7 +1637,7 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         //Setting object to nil
         _textFieldView = nil
 
-        _IQShowLog("****** \(__FUNCTION__) ended ******")
+        _IQShowLog("****** \(#function) ended ******")
     }
 
     /** UITextViewTextDidChangeNotificationBug,  fix for iOS 7.0.x - http://stackoverflow.com/questions/18966675/uitextview-in-ios7-clips-the-last-line-of-text-string */
@@ -1683,7 +1672,7 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /**  UIApplicationWillChangeStatusBarOrientationNotification. Need to set the textView to it's original position. If any frame changes made. (Bug ID: #92)*/
     internal func willChangeStatusBarOrientation(notification:NSNotification) {
         
-        _IQShowLog("****** \(__FUNCTION__) started ******")
+        _IQShowLog("****** \(#function) started ******")
         
         //If textFieldViewInitialRect is saved then restore it.(UITextView case @canAdjustTextView)
         if _keyboardManagerFlags.isTextFieldViewFrameChanged == true {
@@ -1701,7 +1690,7 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             }
         }
 
-        _IQShowLog("****** \(__FUNCTION__) ended ******")
+        _IQShowLog("****** \(#function) ended ******")
     }
     
     ///------------------
@@ -1780,7 +1769,7 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 if textField.respondsToSelector(Selector("setInputAccessoryView:")) && (textField.inputAccessoryView == nil || textField.inputAccessoryView?.tag == IQKeyboardManager.kIQPreviousNextButtonToolbarTag) {
                     
                     //Now adding textField placeholder text as title of IQToolbar  (Enhancement ID: #27)
-                    textField.addDoneOnKeyboardWithTarget(self, action: "doneAction:", shouldShowPlaceholder: shouldShowTextFieldPlaceholder)
+                    textField.addDoneOnKeyboardWithTarget(self, action: #selector(IQKeyboardManager.doneAction(_:)), shouldShowPlaceholder: shouldShowTextFieldPlaceholder)
                     textField.inputAccessoryView?.tag = IQKeyboardManager.kIQDoneButtonToolbarTag //  (Bug ID: #78)
                 }
                 
