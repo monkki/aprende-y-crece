@@ -357,11 +357,26 @@ class ViewController: UIViewController {
                             
                             for json in jsonResponse {
                                 
-                                self.fechaInicio = json["fechaInicio"] as! String
-                                self.fechaTermino = json["fechaTermino"] as! String
-                                self.montoMeta = json["montoMeta"] as! String
-                                self.montoMinimo = json["montoMinimo"] as! String
-                                self.nombreMeta = json["nombreMeta"] as! String
+                                if let fInicio = json["fechaInicio"] as? String {
+                                    self.fechaInicio = fInicio
+                                }
+                                
+                                if let fTermino = json["fechaTermino"] as? String {
+                                    self.fechaTermino = fTermino
+                                }
+                                
+                                if let mMeta = json["montoMeta"] as? String {
+                                    self.montoMeta = mMeta
+                                }
+                                
+                                if let mMinimo = json["montoMinimo"] as? String {
+                                    self.montoMinimo = mMinimo
+                                }
+                                
+                                if let nMeta = json["nombreMeta"] as? String {
+                                    self.nombreMeta = nMeta
+                                }
+                                
                                 
                         // INGRESOS
                                 

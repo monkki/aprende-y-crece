@@ -43,8 +43,8 @@ class PageContentViewController: UIViewController {
             
         }
         
-        registrateBoton.enabled = (index == 2) ? true : false
-        ingresaBoton.enabled = (index == 2) ? true :  false
+//        registrateBoton.enabled = (index == 2) ? true : false
+//        ingresaBoton.enabled = (index == 2) ? true :  false
 
         pageControl.currentPage = index
         

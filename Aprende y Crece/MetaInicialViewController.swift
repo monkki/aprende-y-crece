@@ -396,7 +396,7 @@ class MetaInicialViewController: UIViewController, UINavigationControllerDelegat
         
         let nombre = nombreMeta.stringByAddingPercentEncodingWithAllowedCharacters(customAllowedSet)!
         
-        let urlString = "http://intercubo.com/aprendeycrece/api/insertarMeta.php?idUsuario=" + id + "&nombreMeta=" + nombre + "&fechaInicio=" + fechaInicio + "&fechaTermino=" + fechaFinal + "&montoMeta=" + montoMeta + "&montoMinimo=" + montoAhorrar
+        let urlString = "http://intercubo.com/aprendeycrece/api/insertarMeta.php?idUsuario=" + id + "&nombreMeta=" + nombre + "&fechaInicio=" + fechaInicio + "&fechaTermino=" + fechaFinal + "&montoMeta=" + montoMeta + "&montoMinimo=" + montoAhorrar + "&metaDefinida=SI"
         
         let url = NSURL(string: urlString)
         

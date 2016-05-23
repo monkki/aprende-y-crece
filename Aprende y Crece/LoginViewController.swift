@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDelegate, GIDSignInDelegate, GIDSignInUIDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDelegate {
     
     
     // TEXTFIELDS REGISTRAR
@@ -43,13 +43,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     
     // BOTONES DE LOGIN
     @IBOutlet var botonLoginFacebook: FBSDKLoginButton!
-    @IBOutlet weak var signInButton: GIDSignInButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        GIDSignIn.sharedInstance().delegate = self
-        GIDSignIn.sharedInstance().uiDelegate = self
         
         emailTextfield.delegate = self
         contraseñaTextfield.delegate = self
@@ -86,7 +82,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
                     self.performSegueWithIdentifier("inicioSegue", sender: self)
                 })
                 
-            }
+            } 
             
             print("Bienvenido " + nombre)
             
@@ -441,72 +437,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         self.performSegueWithIdentifier("inicioSegue", sender: self)
     }
     
-    /// METODOS DE SIGN IN GOOGLE
-    
-    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {
-        
-        if let err = error {
-            print(err)
-        }
-        else {
-            print(GIDSignIn.sharedInstance().currentUser.profile.imageURLWithDimension(150))
-            
-            let url = GIDSignIn.sharedInstance().currentUser.profile.imageURLWithDimension(150)
-            
-            // Obtener foto de Google
-            
-            let fotoGoogle = url
-            
-            if let data = NSData(contentsOfURL: fotoGoogle!) {
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    
-                    let imagenGrandeGoogle = UIImage(data: data)
-                    print("La imagen grande de google es es \(imagenGrandeGoogle)")
-                    
-                    
-                    // Guardar imagen de perfil
-                    var documentsDirectory:String?
-                    
-                    var paths:[AnyObject] = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
-                    
-                
-                    
-                    if paths.count > 0 {
-                        
-                        
-                        documentsDirectory = paths[0] as? String
-                        
-                        let savePath = documentsDirectory! + "/imagenPerfil.jpg"
-                        
-                        NSFileManager.defaultManager().createFileAtPath(savePath, contents: data, attributes: nil)
-                        
-                        
-                        
-                    }
-                    
-                })
-            }
-            
-            
-            let userId = user.userID                  // For client-side use only!
-            let idToken = user.authentication.idToken // Safe to send to the server
-            let name = user.profile.name
-            let email = user.profile.email
-            
-            print("User id " + userId)
-            print("Token id " + idToken)
-            print("Nombre " + name)
-            print("email " + email)
-            
-            loginConGoogle(email, googleId: userId)
-            
-            
-        }
-    }
-    
-    func signIn(signIn: GIDSignIn!, didDisconnectWithUser user: GIDGoogleUser!, withError error: NSError!) {
-        
-    }
     
     @IBAction func unwindToHomeScreen(segue:UIStoryboardSegue) {
         
@@ -530,9 +460,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         return emailTest.evaluateWithObject(testStr)
     }
     
+  
     
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "contrasenaSegue3" {
+            
+            let destinoVC = segue.destinationViewController as! ContrasenaFaceViewController
+            destinoVC.nombreCompletoFacebook = nombreCompletoFacebook
+            destinoVC.emailFacebook = emailFacebook
+            destinoVC.idFacebook = idFacebook
+            destinoVC.nombreFacebook = nombreFacebook
+            destinoVC.apellidoFacebook = apellidoFacebook
+            
+        }
+        
+        
+    }
     
-    
+    // MARK: - Login Facebook
     
     // FUNCION PARA LOGEAR USUARIO FACEBOOK
     
@@ -568,15 +514,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
                             
                             print(error)
                             
-                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                                // Iniciar Loader
-                                JHProgressHUD.sharedHUD.hide()
-                                let loginManager = FBSDKLoginManager()
-                                loginManager.logOut()
-                                self.mostraMSJ("Error al hacer login con Facebook, intente nuevamente mas tarde")
-                                
+                            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.4 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
+                                self.performSegueWithIdentifier("contrasenaSegue3", sender: self)
                             })
-                            
                             
                             
                         } else {
@@ -612,6 +552,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
                                 NSUserDefaults.standardUserDefaults().setObject(nombre, forKey: "nombre")
                                 NSUserDefaults.standardUserDefaults().setObject(apellido, forKey: "apellido")
                                 NSUserDefaults.standardUserDefaults().setObject(correo, forKey: "correo")
+                                NSUserDefaults.standardUserDefaults().setBool(true, forKey: "MetaInicialGuardada")
                                 NSUserDefaults.standardUserDefaults().synchronize()
                                 
                             }
@@ -644,139 +585,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         }
     }
 
-  
-    // FUNCION PARA LOGEAR USUARIO CON Google
-    
-    func loginConGoogle(correo: String, googleId: String) {
-        
-        let urlString = "http://intercubo.com/aprendeycrece/api/loginRedes.php?c=" + correo + "&Gid=" + googleId
-        
-        let url = NSURL(string: urlString)
-        
-        if let url = url {
-            
-            let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
-                
-                if error != nil {
-                    
-                    print(error?.localizedDescription)
-                    
-                }
-                
-                if let data = data {
-                    
-                    do {
-                        
-                        if let errorResult = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary {
-                            
-                            let error = errorResult["error"] as! String
-                            
-                            print(error)
-                            
-                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                                // Iniciar Loader
-                                JHProgressHUD.sharedHUD.hide()
-                                self.mostraMSJ("Correo o contraseña incorrectos")
-                                
-                            })
-                            
-                            
-                            
-                        } else {
-                            
-                            let jsonResult = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! NSArray
-                            
-                            print(jsonResult)
-                            
-                            for json in jsonResult {
-                                
-                                let correo = json["correo"] as! String
-                                if let Gid = json["Gid"] as? Int {
-                                    print(Gid)
-                                    NSUserDefaults.standardUserDefaults().setObject(Gid, forKey: "Gid")
-                                }
-                                let idUsuario = json["id"] as! Int
-                                let nombreCompleto = json["nombre"] as! String
-                                let token = json["token"] as! NSString
-                                
-                                let fullName = nombreCompleto
-                                let fullNameArr = fullName.characters.split{$0 == " "}.map(String.init)
-                                
-                                let nombre = fullNameArr[0]
-                                let apellido = fullNameArr[1]
-                                
-                                
-                                print(correo)
-                                print(String(idUsuario))
-                                print(nombre)
-                                print(token)
-                                
-                                NSUserDefaults.standardUserDefaults().setObject(token, forKey: "tokenServer")
-                                NSUserDefaults.standardUserDefaults().setObject(idUsuario, forKey: "idUsuario")
-                                NSUserDefaults.standardUserDefaults().setObject(nombre, forKey: "nombre")
-                                NSUserDefaults.standardUserDefaults().setObject(apellido, forKey: "apellido")
-                                NSUserDefaults.standardUserDefaults().setObject(correo, forKey: "correo")
-                                NSUserDefaults.standardUserDefaults().synchronize()
-                                
-                            }
-                            
-                            
-                            
-                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                                // Iniciar Loader
-                                JHProgressHUD.sharedHUD.hide()
-                                self.performSegueWithIdentifier("inicioSegue", sender: self)
-                                
-                            })
-                            
-                            
-                        }
-                        
-                    } catch {
-                        
-                    }
-                    
-                    
-                } else {
-                    
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        // Iniciar Loader
-                        JHProgressHUD.sharedHUD.hide()
-                    })
-                    print("Hubo un problema con la URL")
-                    
-                }
-                
-            })
-            task.resume()
-            
-            
-        } else {
-            
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                // Iniciar Loader
-                JHProgressHUD.sharedHUD.hide()
-            })
-            print("Hubo un problema con la URL")
-            
-        }
-        
-        
-    }
 
-    
-    
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

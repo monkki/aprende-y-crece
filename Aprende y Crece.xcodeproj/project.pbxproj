@@ -660,6 +660,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.somospulso.Aprende-y-Crece";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "931ccdfe-f2f0-4c3b-99ab-70d7718061ae";
 				SWIFT_OBJC_BRIDGING_HEADER = "Aprende y Crece/Aprende y Crece-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -690,6 +691,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.somospulso.Aprende-y-Crece";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "931ccdfe-f2f0-4c3b-99ab-70d7718061ae";
 				SWIFT_OBJC_BRIDGING_HEADER = "Aprende y Crece/Aprende y Crece-Bridging-Header.h";
 			};
 			name = Release;
