@@ -437,12 +437,12 @@ class PerfilViewController: UIViewController, UITextFieldDelegate, UITextViewDel
     }
 
     
-    func actualizarPerfil(var campo:String, var valor: String) {
+    func actualizarPerfil(campo:String, valor: String) {
         
         let customAllowedSet = NSCharacterSet.URLQueryAllowedCharacterSet()
     
-        campo = campo.stringByAddingPercentEncodingWithAllowedCharacters(customAllowedSet)!
-        valor = valor.stringByAddingPercentEncodingWithAllowedCharacters(customAllowedSet)!
+        let campo = campo.stringByAddingPercentEncodingWithAllowedCharacters(customAllowedSet)!
+        let valor = valor.stringByAddingPercentEncodingWithAllowedCharacters(customAllowedSet)!
         
         let urlString = "http://intercubo.com/aprendeycrece/api/actualizarVariable.php?idUsuario=" + String(idUsuario) + "&campo=" + campo + "&valor=" + valor
     
@@ -509,19 +509,95 @@ class PerfilViewController: UIViewController, UITextFieldDelegate, UITextViewDel
                             
                             for json in jsonResponse {
                                 
-                                let edad = json["edad"] as! String
-                                let genero = json["genero"] as! String
-                                let ubicacion = json["ubicacion"] as! String
-                                let profesion = json["profesion"] as! String
+                                if let edad = json["edad"] as? String {
+                                    
+                                    if edad == "" {
+                                        
+                                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                            
+                                            self.edadLabel.text = "Edad"
+                                            
+                                        })
+                                        
+                                    } else {
+                                        
+                                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                            
+                                            self.edadLabel.text = edad
+                                            
+                                        })
+                                        
+                                    }
+
+                                    
+                                }
+                                if let genero = json["genero"] as? String {
+                                    
+                                    if genero == "" {
+                                        
+                                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                            
+                                            self.generoLabel.text = "Genero"
+                                            
+                                        })
+                                        
+                                    } else {
+                                        
+                                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                            
+                                            self.generoLabel.text = genero
+                                            
+                                        })
+                                        
+                                    }
+                                    
+                                }
+                                if let ubicacion = json["ubicacion"] as? String {
+                                    
+                                    if ubicacion == "" {
+                                        
+                                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                            
+                                            self.ubicacionLabel.text = "Ubicación"
+                                            
+                                        })
+                                        
+                                    } else {
+                                        
+                                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                            
+                                            self.ubicacionLabel.text = ubicacion
+                                            
+                                        })
+                                        
+                                    }
+                                }
+                                if let profesion = json["profesion"] as? String {
+                                    
+                                    if profesion == "" {
+                                        
+                                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                            
+                                            self.profesionLabel.text = "Profesión"
+                                            
+                                        })
+                                        
+                                    } else {
+                                        
+                                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                            
+                                            self.profesionLabel.text = profesion
+                                            
+                                        })
+                                        
+                                    }
+                                    
+                                }
                                 let tipoIngreso = json["tipoIngreso"] as! String
                                 let ingreso = json["ingreso"] as! String
                                 
                                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                                     
-                                    self.edadLabel.text = edad
-                                    self.generoLabel.text = genero
-                                    self.ubicacionLabel.text = ubicacion
-                                    self.profesionLabel.text = profesion
                                     self.tipoDeIngresoLabel.text = tipoIngreso
                                     self.ingresoLabel.text = ingreso
                                     
