@@ -103,6 +103,15 @@ class MetaInicialViewController: UIViewController, UINavigationControllerDelegat
             if textView.text.isEmpty {
                 textView.text = ""
             }
+          /*
+            else {
+                let formatter = NSNumberFormatter()
+                formatter.numberStyle = .CurrencyStyle
+                // formatter.locale = NSLocale.currentLocale() // This is the default
+                formatter.stringFromNumber(Int(textView.text)!) // "$123.44"
+                textView.text = formatter.stringFromNumber(Int(textView.text)!)
+            }
+        */
         } else if textView == ahorroDeberaSerTextView {
             if textView.text.isEmpty {
                 textView.text = ""
